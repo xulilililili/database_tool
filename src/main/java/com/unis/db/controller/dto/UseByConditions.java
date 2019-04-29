@@ -18,11 +18,20 @@ public class UseByConditions {
      */
     @NotNull(message = "类型为空", groups = {MakeDataGroup.class, SearchGroup.class})
     private String type;
+
     /**
      * 算法版本
      */
     @NotNull(message = "算法版本为空", groups = {MakeDataGroup.class, SearchGroup.class})
     private String algorithm;
+
+    /**
+     * 起始日期
+     */
+    @DateTimeFormat(pattern = "yyyyMMdd")
+    @NotNull(message = "起始日期为空", groups = {MakeDataGroup.class, SearchGroup.class})
+    private String startDate;
+
     /**
      * 天数
      * 1.造数据代表造数据的天数
@@ -33,33 +42,30 @@ public class UseByConditions {
     private int days;
 
     /**
-     * 起始日期
-     */
-    @DateTimeFormat(pattern = "yyyyMMdd")
-    @NotNull(message = "起始日期为空", groups = {MakeDataGroup.class, SearchGroup.class})
-    private String startDate;
-
-    /**
      * 线程数
      */
     @Max(message = "最大值不得大于1", groups = {MakeDataGroup.class}, value = 8)
     @Min(message = "最小值不得小于1", groups = {MakeDataGroup.class}, value = 1)
     @NotNull(message = "线程数为空", groups = {MakeDataGroup.class})
     private int threadNum;
+
     /**
      * 循环次数
      */
     @NotNull(message = "循环次数为空", groups = {MakeDataGroup.class})
     private int loop;
+
     /**
      * copyIn 单次提交条数
      */
     @NotNull(message = "单次提交条数为空", groups = {MakeDataGroup.class})
     private int batchSize;
+
     /**
      * 留存期
      */
     private int remainDate = 150;
+
     /**
      * 建表是否有索引:true false
      */

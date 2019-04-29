@@ -23,57 +23,10 @@ public class MakeDataServiceImpl implements MakeDataService {
     private static final Logger logger = LoggerFactory.getLogger(MakeDataServiceImpl.class);
 
     /**
-     * 线程数
-     */
-    @Value("${generate.thread-number}")
-    private int threadNum;
-    /**
-     * 天数
-     */
-    @Value("${generate.days}")
-    private int days;
-
-    /**
-     * 起始日期
-     */
-    @Value("${generate.start-date}")
-    private String startDate;
-
-    /**
-     * 循环次数
-     */
-    @Value("${generate.loop}")
-    private int loop;
-
-    /**
-     * copyIn 单次提交条数
-     */
-    @Value("${generate.batch-size}")
-    private int batchSize;
-
-    /**
-     * 留存期
-     */
-    @Value("${generate.remain-date}")
-    private int remainDate;
-
-    /**
      * 数据库类型: gp ,pg
      */
     @Value("${generate.database-type}")
     private String databaseType;
-
-    /**
-     * 建表是否有索引:true false
-     */
-    @Value("${generate.index}")
-    private boolean index;
-
-    /**
-     * 算法版本
-     */
-    @Value("${generate.algorithm-version}")
-    private String version;
 
     @Autowired
     private ThreadUtils threadUtils;
@@ -82,8 +35,11 @@ public class MakeDataServiceImpl implements MakeDataService {
     VehicleService vehicleService;
 
     @Override
-    public Boolean useThread(String tableName, boolean partitionState) {
+    public Boolean useThread(String tableName, boolean partitionState, UseByConditions useByConditions) {
         Long begin = System.currentTimeMillis();
+        int loop = useByConditions.getLoop();
+        int batchSize = useByConditions.getBatchSize();
+        int threadNum = useByConditions.getThreadNum();
         for (int i = 0; i < threadNum; i++) {
             CopyInDataService task = new CopyInDataService(tableName, loop, batchSize, partitionState);
             threadUtils.submit(task);
@@ -100,17 +56,18 @@ public class MakeDataServiceImpl implements MakeDataService {
 
     @Override
     public Boolean makeDataByPartition(UseByConditions useByConditions) {
-        String type=useByConditions.getType();
+        String algorithm = useByConditions.getAlgorithm();
+        String type = useByConditions.getType();
         String procName = String.format("viid_%s.%sstructured_create_partition_proc", type, type);
-        String month = startDate.substring(0, 6);
-        vehicleService.executeCreateProc(procName, version, month);
+        String month = useByConditions.getStartDate().substring(0, 6);
+        vehicleService.executeCreateProc(procName, algorithm, month);
         String baseTableName = TableTypeEnum.getTableNameByType(type);
-        String partitionTableName = String.format("%s_%s_%s", baseTableName, version, month);
-        if (useThread(partitionTableName, true)) {
+        String partitionTableName = String.format("%s_%s_%s", baseTableName, algorithm, month);
+        if (useThread(partitionTableName, true, useByConditions)) {
             int maxDay = ToolUtils.getMaxDay(month);
             String date = month + "01";
             for (int i = 0; i < maxDay; i++) {
-                String tableName = String.format("%s_%s_%s", baseTableName, version, date);
+                String tableName = String.format("%s_%s_%s", baseTableName, algorithm, date);
                 vehicleService.createIndex(tableName);
                 date = ToolUtils.getDay(date, 1);
             }
@@ -122,17 +79,21 @@ public class MakeDataServiceImpl implements MakeDataService {
 
     @Override
     public Boolean makeData(UseByConditions useByConditions) {
-        String type=useByConditions.getType();
+        String algorithm = useByConditions.getAlgorithm();
+        String date = useByConditions.getStartDate();
+        int days = useByConditions.getDays();
+        boolean index = useByConditions.isIndex();
+        int remainDate = useByConditions.getRemainDate();
+        String type = useByConditions.getType();
         String baseTableName = TableTypeEnum.getTableNameByType(type);
-        String date = startDate;
         for (int j = 0; j < days; j++) {
-            String tableName = String.format("%s_%s_%s", baseTableName, version, date);
+            String tableName = String.format("%s_%s_%s", baseTableName, algorithm, date);
             vehicleService.createTableLike(tableName, baseTableName, index);
-            if (useThread(tableName, false)) {
+            if (useThread(tableName, false, useByConditions)) {
                 if (DatabaseTypeEnum.GP.getType().equals(databaseType)) {
                     String procName = String.format("viid_%s.%sstructured_create_index_proc", type, type);
-                    vehicleService.executeCreateProc(procName, version, date);
-                    vehicleService.dropTable(String.format("%s_%s_%s", baseTableName, version, ToolUtils.getDay(date, -remainDate)));
+                    vehicleService.executeCreateProc(procName, algorithm, date);
+                    vehicleService.dropTable(String.format("%s_%s_%s", baseTableName, algorithm, ToolUtils.getDay(date, -remainDate)));
                 } else {
                     vehicleService.createIndex(tableName);
                 }

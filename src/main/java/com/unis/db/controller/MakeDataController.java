@@ -28,19 +28,12 @@ public class MakeDataController {
     @Autowired
     private MakeDataService makeDataService;
 
-
-
-    /**
-     * 造车辆结构化数据
-     *
-     * @return
-     */
     @PostMapping(value = {"/make-data"})
     public Boolean makeData(
             @Validated({UseByConditions.MakeDataGroup.class}) @RequestBody UseByConditions useByConditions,
             BindingResult bindingResult) {
         bindingResultCheck(bindingResult);
-        return makeDataService.makeData( useByConditions);
+        return makeDataService.makeData(useByConditions);
     }
 
     @PostMapping(value = {"/make-data/partition"})

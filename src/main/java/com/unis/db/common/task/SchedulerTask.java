@@ -16,13 +16,11 @@ import java.util.Random;
 @Component
 public class SchedulerTask {
 
-    @Value("${generate.algorithm-version}")
-    private String version;
+    private final static String VERSION = "a050200";
 
-    @Value("${generate.remain-date}")
-    private int remainDate;
+    private int remainDate = 150;
 
-    public String type = "vehicle";
+    private final static String TYPE = "vehicle";
 
     @Autowired
     VehicleMapper vehicleMapper;
@@ -36,7 +34,7 @@ public class SchedulerTask {
      */
     public String getTableName(int number) {
         String tableNameSql = String.format(
-                "select tablename from pg_tables where tablename like '%sstructured_%s%%' order by tablename", type, version);
+                "select tablename from pg_tables where tablename like '%sstructured_%s%%' order by tablename", TYPE, VERSION);
         //return String.format("viid_%s.%s", type, TableUtils.getRandom(tableNameSql, number));
         return "";
     }
@@ -64,7 +62,7 @@ public class SchedulerTask {
         //使用offset 会让取到的recordID是随机的
         String recordIDSql = String.format("select %s from %s offset 500 limit 200", field, tableName);
         //String recordID = TableUtils.getRandom(recordIDSql, random.nextInt(100));
-       // TableUtils.query(tableName, field, recordID);
+        // TableUtils.query(tableName, field, recordID);
     }
 
     /**

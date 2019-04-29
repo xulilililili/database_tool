@@ -1,9 +1,9 @@
 com\unis\db\common\task\SchedulerTask.class
 com\unis\db\service\impl\PersonServiceImpl.class
 com\unis\db\service\impl\MakeDataServiceImpl.class
-com\unis\db\controller\VehicleController.class
 com\unis\db\service\impl\VehicleServiceImpl.class
 com\unis\db\model\VehicleStructured.class
 com\unis\db\common\utils\TableUtils.class
 com\unis\db\MakeDataApplication.class
+com\unis\db\service\impl\CopyInDataService.class
 com\unis\db\service\MakeDataService.class

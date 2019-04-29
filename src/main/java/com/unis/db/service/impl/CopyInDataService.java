@@ -5,6 +5,8 @@ import com.unis.db.common.utils.ToolUtils;
 import com.unis.db.service.FaceSnapService;
 import com.unis.db.service.PersonService;
 import com.unis.db.service.VehicleService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +18,8 @@ import java.util.concurrent.Callable;
  */
 
 public class CopyInDataService implements Callable {
+
+    private static final Logger logger = LoggerFactory.getLogger(CopyInDataService.class);
 
     private VehicleService vehicleService = new VehicleServiceImpl();
 
