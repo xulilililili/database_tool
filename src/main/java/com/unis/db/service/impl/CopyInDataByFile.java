@@ -1,16 +1,11 @@
 package com.unis.db.service.impl;
 
 import com.unis.db.common.utils.CopyInUtils;
-import com.unis.db.common.utils.JdbcUtils;
 import com.unis.db.common.utils.ToolUtils;
-import org.postgresql.copy.CopyManager;
-import org.postgresql.core.BaseConnection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.*;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

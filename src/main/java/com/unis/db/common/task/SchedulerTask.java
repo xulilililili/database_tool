@@ -37,7 +37,8 @@ public class SchedulerTask {
     public String getTableName(int number) {
         String tableNameSql = String.format(
                 "select tablename from pg_tables where tablename like '%sstructured_%s%%' order by tablename", type, version);
-        return String.format("viid_%s.%s", type, TableUtils.getRandom(tableNameSql, number));
+        //return String.format("viid_%s.%s", type, TableUtils.getRandom(tableNameSql, number));
+        return "";
     }
 
     /**
@@ -48,8 +49,8 @@ public class SchedulerTask {
         String field = "recordid";
         String tableName = getTableName(remainDate + 1);
         String recordIDSql = String.format("select %s from %s offset 500 limit 200", field, tableName);
-        String recordID = TableUtils.getRandom(recordIDSql, random.nextInt(100));
-        TableUtils.query(tableName, field, recordID, true);
+        //String recordID = TableUtils.getRandom(recordIDSql, random.nextInt(100));
+        //TableUtils.query(tableName, field, recordID, true);
     }
 
     /**
@@ -62,8 +63,8 @@ public class SchedulerTask {
         String tableName = getTableName(random.nextInt(remainDate - 1) + 1);
         //使用offset 会让取到的recordID是随机的
         String recordIDSql = String.format("select %s from %s offset 500 limit 200", field, tableName);
-        String recordID = TableUtils.getRandom(recordIDSql, random.nextInt(100));
-        TableUtils.query(tableName, field, recordID);
+        //String recordID = TableUtils.getRandom(recordIDSql, random.nextInt(100));
+       // TableUtils.query(tableName, field, recordID);
     }
 
     /**
@@ -74,6 +75,6 @@ public class SchedulerTask {
         String field = "plateno";
         //随机值的取法需要过滤第一个表和最后一个表
         String tableName = getTableName(random.nextInt(remainDate - 1) + 1);
-        TableUtils.query(tableName, field, ToolUtils.createPlateNo());
+        //TableUtils.query(tableName, field, ToolUtils.createPlateNo());
     }
 }

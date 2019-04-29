@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @auther xuli
+ * @author xuli
  * @date 2019/3/26
  */
 public enum TableTypeEnum {

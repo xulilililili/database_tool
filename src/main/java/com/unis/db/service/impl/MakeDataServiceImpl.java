@@ -4,6 +4,7 @@ import com.unis.db.common.utils.ThreadUtils;
 import com.unis.db.common.utils.ToolUtils;
 import com.unis.db.common.enums.TableTypeEnum;
 import com.unis.db.common.enums.DatabaseTypeEnum;
+import com.unis.db.controller.dto.UseByConditions;
 import com.unis.db.service.MakeDataService;
 import com.unis.db.service.VehicleService;
 import org.slf4j.Logger;
@@ -98,7 +99,8 @@ public class MakeDataServiceImpl implements MakeDataService {
     }
 
     @Override
-    public Boolean makeDataByPartition(String type) {
+    public Boolean makeDataByPartition(UseByConditions useByConditions) {
+        String type=useByConditions.getType();
         String procName = String.format("viid_%s.%sstructured_create_partition_proc", type, type);
         String month = startDate.substring(0, 6);
         vehicleService.executeCreateProc(procName, version, month);
@@ -119,7 +121,8 @@ public class MakeDataServiceImpl implements MakeDataService {
     }
 
     @Override
-    public Boolean makeData(String type) {
+    public Boolean makeData(UseByConditions useByConditions) {
+        String type=useByConditions.getType();
         String baseTableName = TableTypeEnum.getTableNameByType(type);
         String date = startDate;
         for (int j = 0; j < days; j++) {

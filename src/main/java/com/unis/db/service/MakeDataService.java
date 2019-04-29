@@ -18,18 +18,16 @@ public interface MakeDataService {
 
     /**
      * 造数据(分区表)
-     * @param type 类型
      * @param useByConditions 类
      * @return T or F
      */
-    Boolean makeDataByPartition(String type, UseByConditions useByConditions);
+    Boolean makeDataByPartition(UseByConditions useByConditions);
 
     /**
      * 造数据
-     * @param type 类型
      * @param useByConditions 类
      * @return T or F
      */
-    Boolean makeData(String type, UseByConditions useByConditions);
+    Boolean makeData(UseByConditions useByConditions);
 
 }
