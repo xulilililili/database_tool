@@ -1,7 +1,6 @@
 package com.unis.db.service.impl;
 
 import com.unis.db.common.enums.TableTypeEnum;
-import com.unis.db.common.utils.CopyInUtils;
 import com.unis.db.common.utils.DateUtils;
 import com.unis.db.common.utils.ToolUtils;
 import com.unis.db.dao.VehicleMapper;
@@ -80,7 +79,7 @@ public class VehicleServiceImpl implements VehicleService {
         vehicle.setHasPlate(random.nextInt(2));
         vehicle.setPlateClass(PLATE_CLASS[random.nextInt(PLATE_CLASS.length)]);
         vehicle.setPlateColor(PLATE_COLOR[random.nextInt(PLATE_COLOR.length)]);
-        vehicle.setPlateNo(ToolUtils.createPlateNo());
+        vehicle.setPlateNo(ToolUtils.getRandomPlateNo());
         vehicle.setSpeed(0.0000);
         vehicle.setDirection(random.nextInt(9) + 1);
         vehicle.setDrivingStatusCode("");
@@ -188,32 +187,32 @@ public class VehicleServiceImpl implements VehicleService {
                 fullSql = sql;
                 break;
             case 1:
-                fullSql = String.format("%s and plateno = '%s' %s", sql, ToolUtils.createPlateNo(), sql01);
+                fullSql = String.format("%s and plateno = '%s' %s", sql, ToolUtils.getRandomPlateNo(), sql01);
                 break;
             case 2:
-                fullSql = String.format("%s and plateno like '%s%%' %s", sql, ToolUtils.createPlateNo().substring(0, 4), sql01);
+                fullSql = String.format("%s and plateno like '%s%%' %s", sql, ToolUtils.getRandomPlateNo().substring(0, 4), sql01);
                 break;
             case 3:
-                fullSql = String.format("%s and plateno like '%%%s' %s", sql, ToolUtils.createPlateNo().substring(3, 7), sql01);
+                fullSql = String.format("%s and plateno like '%%%s' %s", sql, ToolUtils.getRandomPlateNo().substring(3, 7), sql01);
                 break;
             case 4:
-                fullSql = String.format("%s and plateno like '%%%s%%' %s", sql, ToolUtils.createPlateNo().substring(2, 6), sql01);
+                fullSql = String.format("%s and plateno like '%%%s%%' %s", sql, ToolUtils.getRandomPlateNo().substring(2, 6), sql01);
                 break;
             case 5:
                 fullSql = String.format("%s and deviceid in (%s) and vehiclecolor = %s and vehicleclass = '%s' %s"
-                        , sql, ToolUtils.createDeviceIds(10), VEHICLE_COLOR[random.nextInt(VEHICLE_COLOR.length)], VEHICLE_CLASS[random.nextInt(VEHICLE_CLASS.length)], sql01);
+                        , sql, ToolUtils.getRandomDeviceIds(10), VEHICLE_COLOR[random.nextInt(VEHICLE_COLOR.length)], VEHICLE_CLASS[random.nextInt(VEHICLE_CLASS.length)], sql01);
                 break;
             case 6:
                 fullSql = String.format("%s and deviceid in (%s) and vehiclecolor = %s and vehicleclass = '%s' %s"
-                        , sql, ToolUtils.createDeviceIds(20), VEHICLE_COLOR[random.nextInt(VEHICLE_COLOR.length)], VEHICLE_CLASS[random.nextInt(VEHICLE_CLASS.length)], sql01);
+                        , sql, ToolUtils.getRandomDeviceIds(20), VEHICLE_COLOR[random.nextInt(VEHICLE_COLOR.length)], VEHICLE_CLASS[random.nextInt(VEHICLE_CLASS.length)], sql01);
                 break;
             case 7:
                 fullSql = String.format("%s and deviceid in (%s) and vehiclecolor = %s and vehicleclass = '%s' and plateclass = %s %s"
-                        , sql, ToolUtils.createDeviceIds(10), VEHICLE_COLOR[random.nextInt(VEHICLE_COLOR.length)], VEHICLE_CLASS[random.nextInt(VEHICLE_CLASS.length)], PLATE_CLASS[random.nextInt(PLATE_CLASS.length)], sql01);
+                        , sql, ToolUtils.getRandomDeviceIds(10), VEHICLE_COLOR[random.nextInt(VEHICLE_COLOR.length)], VEHICLE_CLASS[random.nextInt(VEHICLE_CLASS.length)], PLATE_CLASS[random.nextInt(PLATE_CLASS.length)], sql01);
                 break;
             case 8:
                 fullSql = String.format("%s and deviceid in (%s) and vehiclecolor = %s and vehicleclass = '%s' and plateclass = %s %s"
-                        , sql, ToolUtils.createDeviceIds(20), VEHICLE_COLOR[random.nextInt(VEHICLE_COLOR.length)], VEHICLE_CLASS[random.nextInt(VEHICLE_CLASS.length)], PLATE_CLASS[random.nextInt(PLATE_CLASS.length)], sql01);
+                        , sql, ToolUtils.getRandomDeviceIds(20), VEHICLE_COLOR[random.nextInt(VEHICLE_COLOR.length)], VEHICLE_CLASS[random.nextInt(VEHICLE_CLASS.length)], PLATE_CLASS[random.nextInt(PLATE_CLASS.length)], sql01);
                 break;
             case 9:
                 fullSql = String.format("%s and vehiclecolor = %s and vehicleclass = '%s'  %s"

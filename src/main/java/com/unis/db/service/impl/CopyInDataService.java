@@ -4,6 +4,7 @@ import com.unis.db.common.utils.CopyInUtils;
 import com.unis.db.common.utils.ToolUtils;
 import com.unis.db.service.FaceSnapService;
 import com.unis.db.service.PersonService;
+import com.unis.db.service.TerminalFeatureService;
 import com.unis.db.service.VehicleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,8 @@ public class CopyInDataService implements Callable {
     private FaceSnapService faceSnapService = new FaceSnapServiceImpl();
 
     private PersonService personService = new PersonServiceImpl();
+
+    private TerminalFeatureService terminalFeatureService = new TerminalFeatureServiceImpl();
 
     private String tableName;
 
@@ -51,11 +54,11 @@ public class CopyInDataService implements Callable {
         for (int i = 0; i < loop; i++) {
             for (int j = 0; j < batchSize; j++) {
                 if (partitionState) {
-                    passTime = ToolUtils.createPassTime(date);
+                    passTime = ToolUtils.getRandomPassTime(date);
                 } else {
-                    passTime = ToolUtils.createPassTime(date, ToolUtils.getDay(date, 1));
+                    passTime = ToolUtils.getRandomPassTime(date, ToolUtils.getDay(date, 1));
                 }
-                long recordID = ToolUtils.createRecordID(passTime);
+                long recordID = ToolUtils.getRandomRecordID(passTime);
                 switch (type) {
                     case "vehicle":
                         dataList.add(vehicleService.makeVehicleData(passTime, recordID, partitionState));
@@ -65,6 +68,9 @@ public class CopyInDataService implements Callable {
                         break;
                     case "person":
                         dataList.add(personService.makePersonData(passTime, recordID, partitionState));
+                        break;
+                    case "terminalfeature":
+                        dataList.add(terminalFeatureService.makeTerminalFeatureData(passTime, recordID, partitionState));
                         break;
                     default:
                         break;

@@ -2,7 +2,6 @@ package com.unis.db.controller;
 
 import com.unis.db.controller.dto.UseByConditions;
 import com.unis.db.service.MakeDataService;
-import com.unis.db.service.VehicleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

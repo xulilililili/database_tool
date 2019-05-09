@@ -29,7 +29,7 @@ public class ToolUtils {
     private static final String TOLLGATE_PREFIX = "50010500001211000";
     private static final String[] DEVICE_SUFFIX = {"086", "087", "089", "090", "092", "093", "094", "095", "096", "097", "098", "099", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "174", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190"};
 
-
+    private static Random random = new Random();
     /**
      * front add 0
      *
@@ -37,7 +37,7 @@ public class ToolUtils {
      * @param length 长度
      * @return
      */
-    public static String frontAddZero(int powNum, long length) {
+    private static String frontAddZero(int powNum, long length) {
         StringBuilder str = new StringBuilder(Integer.toBinaryString(powNum));
         while (str.length() < length) {
             str.append("0");
@@ -51,8 +51,7 @@ public class ToolUtils {
      * @param passTime 时间戳
      * @return recordID
      */
-    public static long createRecordID(long passTime) {
-        Random random = new Random();
+    public static long getRandomRecordID(long passTime) {
         String node12 = frontAddZero(random.nextInt((int) Math.pow(2, NODE_DIGIT)), NODE_DIGIT);
         String random17 = frontAddZero(random.nextInt((int) Math.pow(2, RANDOM_DIGIT)), RANDOM_DIGIT);
         String service3 = String.format("%03d", Integer.parseInt(Integer.toBinaryString(random.nextInt(2))));
@@ -79,7 +78,7 @@ public class ToolUtils {
      * @param end   结束时间戳
      * @return 中间随机时间戳
      */
-    public static long randomNum(long begin, long end) {
+    private static long randomNum(long begin, long end) {
         long rtn = begin + (long) (Math.random() * (end - begin));
         if (rtn == begin || rtn == end) {
             return randomNum(begin, end);
@@ -95,7 +94,7 @@ public class ToolUtils {
      * @param end   结束时间 类型：yyyyMMdd
      * @return 中间随机时间戳
      */
-    public static Long createPassTime(String begin, String end) {
+    public static Long getRandomPassTime(String begin, String end) {
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
         try {
             Long beginDate = format.parse(begin).getTime();
@@ -117,9 +116,9 @@ public class ToolUtils {
      * @param yearMonth 月份
      * @return 使劲戳
      */
-    public static Long createPassTime(String yearMonth) {
+    public static Long getRandomPassTime(String yearMonth) {
         String begin = yearMonth + "01";
-        return createPassTime(begin, ToolUtils.getDay(begin, getMaxDay(yearMonth)));
+        return getRandomPassTime(begin, ToolUtils.getDay(begin, getMaxDay(yearMonth)));
     }
 
     /**
@@ -138,7 +137,6 @@ public class ToolUtils {
     }
 
     public static String getDate(String month, int days) {
-        Random random = new Random();
         DecimalFormat df = new DecimalFormat("00");
         String startDate = month + "01";
         if (days != ToolUtils.getMaxDay(month)) {
@@ -175,8 +173,7 @@ public class ToolUtils {
      *
      * @return 车牌号码
      */
-    public static String createPlateNo() {
-        Random random = new Random();
+    public static String getRandomPlateNo() {
         int num = random.nextInt(40);
         String province = "浙";
         if (num < VEHICLE_PROVINCE.length) {
@@ -196,8 +193,7 @@ public class ToolUtils {
      * @param number 设备id数量
      * @return 拼接后的设备id
      */
-    public static String createDeviceIds(int number) {
-        Random random = new Random();
+    public static String getRandomDeviceIds(int number) {
         int startNum = random.nextInt(DEVICE_SUFFIX.length - number);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < number; i++) {
@@ -205,5 +201,22 @@ public class ToolUtils {
         }
         sb.deleteCharAt(sb.length() - 1);
         return sb.toString();
+    }
+
+    /**
+     * 随机创建mac值
+     * @return mac
+     */
+    public static String getRandomMac(){
+        String[] mac={
+                String.format("%02x",random.nextInt(0xff)),
+                String.format("%02x",random.nextInt(0xff)),
+                String.format("%02x",random.nextInt(0xff)),
+                String.format("%02x",random.nextInt(0xff)),
+                String.format("%02x",random.nextInt(0xff)),
+                String.format("%02x",random.nextInt(0xff)),
+                String.format("%02x",random.nextInt(0xff)),
+        };
+        return String.join("",mac).toUpperCase();
     }
 }

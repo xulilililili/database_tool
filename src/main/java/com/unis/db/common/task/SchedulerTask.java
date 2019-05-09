@@ -73,6 +73,6 @@ public class SchedulerTask {
         String field = "plateno";
         //随机值的取法需要过滤第一个表和最后一个表
         String tableName = getTableName(random.nextInt(remainDate - 1) + 1);
-        //TableUtils.query(tableName, field, ToolUtils.createPlateNo());
+        //TableUtils.query(tableName, field, ToolUtils.getRandomPlateNo());
     }
 }

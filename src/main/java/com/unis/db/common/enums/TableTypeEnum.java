@@ -29,7 +29,12 @@ public enum TableTypeEnum {
      * 人脸归档
      */
     FaceArchive("facearchive","faceid_idx.(faceid)|peopleid_idx.(peopleid)|timestamp_idx.(timestamp)|" +
-            "join_idx.(deviceid,tollgateid,type)","viid_facestatic.face_archive");
+            "join_idx.(deviceid,tollgateid,type)","viid_facestatic.face_archive"),
+    /**
+     * Wifi:终端功能
+     */
+    TerminalFeature("terminalfeature","record_id_idx.(record_id)|mac_idx.(mac)|capture_time_idx.(capture_time)|" +
+            "certificate_code_idx.(certificate_code)|collection_equipment_id_idx.(collection_equipment_id)|","viid_iot.terminal_feature");
 
     private String type;
     private String indexMessage;

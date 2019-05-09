@@ -58,10 +58,10 @@ public class MakeDataServiceImpl implements MakeDataService {
     public Boolean makeDataByPartition(UseByConditions useByConditions) {
         String algorithm = useByConditions.getAlgorithm();
         String type = useByConditions.getType();
-        String procName = String.format("viid_%s.%sstructured_create_partition_proc", type, type);
+        String baseTableName = TableTypeEnum.getTableNameByType(type);
+        String procName = String.format("%s_create_partition_proc", baseTableName);
         String month = useByConditions.getStartDate().substring(0, 6);
         vehicleService.executeCreateProc(procName, algorithm, month);
-        String baseTableName = TableTypeEnum.getTableNameByType(type);
         String partitionTableName = String.format("%s_%s_%s", baseTableName, algorithm, month);
         if (useThread(partitionTableName, true, useByConditions)) {
             int maxDay = ToolUtils.getMaxDay(month);
@@ -91,7 +91,7 @@ public class MakeDataServiceImpl implements MakeDataService {
             vehicleService.createTableLike(tableName, baseTableName, index);
             if (useThread(tableName, false, useByConditions)) {
                 if (DatabaseTypeEnum.GP.getType().equals(databaseType)) {
-                    String procName = String.format("viid_%s.%sstructured_create_index_proc", type, type);
+                    String procName = String.format("%s_create_index_proc", baseTableName);
                     vehicleService.executeCreateProc(procName, algorithm, date);
                     vehicleService.dropTable(String.format("%s_%s_%s", baseTableName, algorithm, ToolUtils.getDay(date, -remainDate)));
                 } else {
