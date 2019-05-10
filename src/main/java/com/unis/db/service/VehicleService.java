@@ -35,8 +35,9 @@ public interface VehicleService {
      * 创建索引
      *
      * @param tableName 表名
+     * @param type 类型
      */
-    void createIndex(String tableName);
+    void createIndex(String tableName,String type);
 
     /**
      * 执行存储过程

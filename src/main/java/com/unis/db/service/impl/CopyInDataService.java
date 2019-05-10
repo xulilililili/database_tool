@@ -32,14 +32,20 @@ public class CopyInDataService implements Callable {
 
     private String tableName;
 
+    private String date;
+
+    private String type;
+
     private int loop;
 
     private int batchSize;
 
     private boolean partitionState;
 
-    public CopyInDataService(String tableName, int loop, int batchSize, boolean partitionState) {
+    public CopyInDataService(String tableName, String date, String type, int loop, int batchSize, boolean partitionState) {
         this.tableName = tableName;
+        this.date = date;
+        this.type = type;
         this.loop = loop;
         this.batchSize = batchSize;
         this.partitionState = partitionState;
@@ -48,28 +54,26 @@ public class CopyInDataService implements Callable {
     @Override
     public Boolean call() {
         List<String> dataList = new ArrayList<>(batchSize);
-        String date = tableName.split("_")[3];
-        String type = tableName.split("\\.")[0].split("_")[1];
         long passTime;
         for (int i = 0; i < loop; i++) {
             for (int j = 0; j < batchSize; j++) {
                 if (partitionState) {
-                    passTime = ToolUtils.getRandomPassTime(date);
+                    passTime = ToolUtils.getRandomPassTimeInMonth(date);
                 } else {
-                    passTime = ToolUtils.getRandomPassTime(date, ToolUtils.getDay(date, 1));
+                    passTime = ToolUtils.getRandomPassTimeInMonth(date, ToolUtils.getDay(date, 1));
                 }
                 long recordID = ToolUtils.getRandomRecordID(passTime);
                 switch (type) {
                     case "vehicle":
                         dataList.add(vehicleService.makeVehicleData(passTime, recordID, partitionState));
                         break;
-                    case "facesnap":
+                    case "face_snap":
                         dataList.add(faceSnapService.makeFaceSnapData(passTime, recordID, partitionState));
                         break;
                     case "person":
                         dataList.add(personService.makePersonData(passTime, recordID, partitionState));
                         break;
-                    case "terminalfeature":
+                    case "terminal_feature":
                         dataList.add(terminalFeatureService.makeTerminalFeatureData(passTime, recordID, partitionState));
                         break;
                     default:

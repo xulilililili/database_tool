@@ -132,9 +132,8 @@ public class VehicleServiceImpl implements VehicleService {
     }
 
     @Override
-    public void createIndex(String tableName) {
+    public void createIndex(String tableName,String type) {
         String[] array = tableName.split("\\.");
-        String type = array[0].split("_")[1];
         Long begin = System.currentTimeMillis();
         Map<String, String> map = TableTypeEnum.getIndexMessageByType(type);
         for (String key : map.keySet()) {

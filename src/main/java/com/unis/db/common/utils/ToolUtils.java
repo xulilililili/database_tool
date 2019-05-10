@@ -94,7 +94,7 @@ public class ToolUtils {
      * @param end   结束时间 类型：yyyyMMdd
      * @return 中间随机时间戳
      */
-    public static Long getRandomPassTime(String begin, String end) {
+    public static Long getRandomPassTimeInMonth(String begin, String end) {
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
         try {
             Long beginDate = format.parse(begin).getTime();
@@ -116,9 +116,9 @@ public class ToolUtils {
      * @param yearMonth 月份
      * @return 使劲戳
      */
-    public static Long getRandomPassTime(String yearMonth) {
+    public static Long getRandomPassTimeInMonth(String yearMonth) {
         String begin = yearMonth + "01";
-        return getRandomPassTime(begin, ToolUtils.getDay(begin, getMaxDay(yearMonth)));
+        return getRandomPassTimeInMonth(begin, ToolUtils.getDay(begin, getMaxDay(yearMonth)));
     }
 
     /**

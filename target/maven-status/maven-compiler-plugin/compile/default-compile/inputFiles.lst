@@ -16,9 +16,11 @@ C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\CopyInUtils.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\enums\DatabaseTypeEnum.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\ThreadUtils.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\model\FaceSnapStructured.java
+C:\xl\code\database_tool\src\main\java\com\unis\db\service\TerminalFeatureService.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\config\HikariConfig.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\impl\CopyInDataService.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\enums\TableTypeEnum.java
+C:\xl\code\database_tool\src\main\java\com\unis\db\model\TerminalFeature.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\ToolUtils.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\VehicleService.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\TableUtils.java
@@ -27,5 +29,6 @@ C:\xl\code\database_tool\src\main\java\com\unis\db\service\impl\MakeDataServiceI
 C:\xl\code\database_tool\src\main\java\com\unis\db\controller\dto\UseByConditions.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\impl\FaceSnapServiceImpl.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\task\SchedulerTask.java
+C:\xl\code\database_tool\src\main\java\com\unis\db\service\impl\TerminalFeatureServiceImpl.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\impl\PersonServiceImpl.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\SpringUtils.java
