@@ -1,7 +1,7 @@
 package com.unis.db.service.impl;
 
 import com.unis.db.common.utils.DateUtils;
-import com.unis.db.common.utils.ToolUtils;
+import com.unis.db.common.utils.RandomUtils;
 import com.unis.db.model.TerminalFeature;
 import com.unis.db.service.TerminalFeatureService;
 import org.slf4j.Logger;
@@ -29,7 +29,7 @@ public class TerminalFeatureServiceImpl implements TerminalFeatureService {
     @Override
     public String makeTerminalFeatureData(long passTime, long recordID, boolean partitionState) {
         terminalFeature.setRecordID(recordID);
-        terminalFeature.setMac(ToolUtils.getRandomMac());
+        terminalFeature.setMac(RandomUtils.getRandomMac());
         terminalFeature.setBrand("unis");
         terminalFeature.setCacheSsid("unis|huawei");
         terminalFeature.setCaptureTime(passTime);
@@ -37,7 +37,7 @@ public class TerminalFeatureServiceImpl implements TerminalFeatureService {
         terminalFeature.setIdentificationType(1);
         terminalFeature.setCertificateCode(CERTIFICATE_CODE[random.nextInt(CERTIFICATE_CODE.length)]);
         terminalFeature.setSsidPosition("unis");
-        terminalFeature.setAccessApMac(ToolUtils.getRandomMac());
+        terminalFeature.setAccessApMac(RandomUtils.getRandomMac());
         terminalFeature.setAccessApChannel("xx");
         terminalFeature.setAccessApEncryptionType("2");
         terminalFeature.setxCoordinate("");

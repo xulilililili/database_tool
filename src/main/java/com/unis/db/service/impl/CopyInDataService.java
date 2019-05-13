@@ -1,7 +1,8 @@
 package com.unis.db.service.impl;
 
 import com.unis.db.common.utils.CopyInUtils;
-import com.unis.db.common.utils.ToolUtils;
+import com.unis.db.common.utils.DateUtils;
+import com.unis.db.common.utils.RandomUtils;
 import com.unis.db.service.FaceSnapService;
 import com.unis.db.service.PersonService;
 import com.unis.db.service.TerminalFeatureService;
@@ -58,11 +59,11 @@ public class CopyInDataService implements Callable {
         for (int i = 0; i < loop; i++) {
             for (int j = 0; j < batchSize; j++) {
                 if (partitionState) {
-                    passTime = ToolUtils.getRandomPassTimeInMonth(date);
+                    passTime = RandomUtils.getRandomPassTimeInMonth(date);
                 } else {
-                    passTime = ToolUtils.getRandomPassTimeInMonth(date, ToolUtils.getDay(date, 1));
+                    passTime = RandomUtils.getRandomPassTime(date, DateUtils.getDateByAdd(date, 1));
                 }
-                long recordID = ToolUtils.getRandomRecordID(passTime);
+                long recordID = RandomUtils.getRandomRecordID(passTime);
                 switch (type) {
                     case "vehicle":
                         dataList.add(vehicleService.makeVehicleData(passTime, recordID, partitionState));

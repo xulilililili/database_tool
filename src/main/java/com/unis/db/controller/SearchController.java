@@ -1,6 +1,7 @@
 package com.unis.db.controller;
 
-import com.unis.db.common.utils.ToolUtils;
+import com.unis.db.common.utils.DateUtils;
+import com.unis.db.common.utils.RandomUtils;
 import com.unis.db.service.VehicleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,8 +28,8 @@ public class SearchController {
     public double getRecordIdRandom(@RequestParam(name = "month") String month,
                                     @RequestParam(name = "days", required = false, defaultValue = "1") int days) {
         String tableName = String.format("viid_vehicle.vehiclestructured_%s_%s", "a050200", month);
-        String startDate = ToolUtils.getDate(month, days);
-        String endDate = ToolUtils.getDay(startDate, days - 1);
+        String startDate = RandomUtils.getRandomDateInMonth(month, days);
+        String endDate = DateUtils.getDateByAdd(startDate, days - 1);
         return vehicleService.getRecordIdPartition(tableName, startDate, endDate);
     }
 
@@ -37,8 +38,8 @@ public class SearchController {
                                    @RequestParam(name = "days", required = false, defaultValue = "1") int days,
                                    @RequestParam(name = "number", required = false, defaultValue = "1") int number) {
         String tableName = String.format("viid_vehicle.vehiclestructured_%s_%s", "a050200", month);
-        String startDate = ToolUtils.getDate(month, days);
-        String endDate = ToolUtils.getDay(startDate, days - 1);
+        String startDate = RandomUtils.getRandomDateInMonth(month, days);
+        String endDate = DateUtils.getDateByAdd(startDate, days - 1);
         return vehicleService.searchStructured(tableName, startDate, endDate, number);
     }
 }

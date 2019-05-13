@@ -1,7 +1,8 @@
 package com.unis.db.service.impl;
 
+import com.unis.db.common.utils.DateUtils;
+import com.unis.db.common.utils.RandomUtils;
 import com.unis.db.common.utils.ThreadUtils;
-import com.unis.db.common.utils.ToolUtils;
 import com.unis.db.common.enums.TableTypeEnum;
 import com.unis.db.common.enums.DatabaseTypeEnum;
 import com.unis.db.controller.dto.UseByConditions;
@@ -65,12 +66,12 @@ public class MakeDataServiceImpl implements MakeDataService {
         vehicleService.executeCreateProc(procName, algorithm, month);
         String partitionTableName = String.format("%s_%s_%s", baseTableName, algorithm, month);
         if (useThread(partitionTableName, true, month, useByConditions)) {
-            int maxDay = ToolUtils.getMaxDay(month);
+            int maxDay = DateUtils.getMaxDate(month);
             String date = month + "01";
             for (int i = 0; i < maxDay; i++) {
                 String tableName = String.format("%s_%s_%s", baseTableName, algorithm, date);
                 vehicleService.createIndex(tableName,type);
-                date = ToolUtils.getDay(date, 1);
+                date = DateUtils.getDateByAdd(date, 1);
             }
             return true;
         } else {
@@ -94,14 +95,14 @@ public class MakeDataServiceImpl implements MakeDataService {
                 if (DatabaseTypeEnum.GP.getType().equals(databaseType)) {
                     String procName = String.format("%s_create_index_proc", baseTableName);
                     vehicleService.executeCreateProc(procName, algorithm, date);
-                    vehicleService.dropTable(String.format("%s_%s_%s", baseTableName, algorithm, ToolUtils.getDay(date, -remainDate)));
+                    vehicleService.dropTable(String.format("%s_%s_%s", baseTableName, algorithm, DateUtils.getDateByAdd(date, -remainDate)));
                 } else {
                     vehicleService.createIndex(tableName,type);
                 }
             } else {
                 return false;
             }
-            date = ToolUtils.getDay(date, 1);
+            date = DateUtils.getDateByAdd(date, 1);
         }
         return true;
     }

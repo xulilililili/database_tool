@@ -1,10 +1,7 @@
 package com.unis.db.common.task;
 
-import com.unis.db.common.utils.TableUtils;
-import com.unis.db.common.utils.ToolUtils;
 import com.unis.db.dao.VehicleMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
@@ -73,6 +70,6 @@ public class SchedulerTask {
         String field = "plateno";
         //随机值的取法需要过滤第一个表和最后一个表
         String tableName = getTableName(random.nextInt(remainDate - 1) + 1);
-        //TableUtils.query(tableName, field, ToolUtils.getRandomPlateNo());
+        //TableUtils.query(tableName, field, RandomUtils.getRandomPlateNo());
     }
 }

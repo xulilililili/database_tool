@@ -1,7 +1,7 @@
 package com.unis.db.service.impl;
 
 import com.unis.db.common.utils.CopyInUtils;
-import com.unis.db.common.utils.ToolUtils;
+import com.unis.db.common.utils.RandomUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,7 +40,7 @@ public class CopyInDataByFile implements Callable {
             while ((line = reader.readLine()) != null) {
                 List<String> recordIDList = Arrays.asList(line.split(","));
                 for (String recordID : recordIDList) {
-                    dataList.add(faceSnapService.makeFaceSnapData(ToolUtils.getPassTime(Long.parseLong(recordID)), Long.parseLong(recordID), false));
+                    dataList.add(faceSnapService.makeFaceSnapData(RandomUtils.getPassTime(Long.parseLong(recordID)), Long.parseLong(recordID), false));
                 }
                 String data = String.join("\n", dataList);
                 //执行copyIn

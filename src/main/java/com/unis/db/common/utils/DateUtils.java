@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -102,5 +103,42 @@ public class DateUtils {
      */
     public static long dateToLong(Date date) {
         return date.getTime();
+    }
+
+    /**
+     * @param today 当天
+     * @param add   加减天数
+     * @return 前后某一天
+     */
+    public static String getDateByAdd(String today, int add) {
+        try {
+            if (add == 0) {
+                return today;
+            }
+            Date date = new SimpleDateFormat("yyyyMMdd").parse(today);
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(date);
+            //日期+1
+            calendar.add(Calendar.DATE, add);
+            return new SimpleDateFormat("yyyyMMdd").format(calendar.getTime());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 得到当月最大天数
+     *
+     * @param yearMonth yyyyMM
+     * @return 最大天数
+     */
+    public static int getMaxDate(String yearMonth) {
+        Calendar calendar = Calendar.getInstance();
+        int year = Integer.parseInt(yearMonth.substring(0, 4));
+        int month = Integer.parseInt(yearMonth.substring(4));
+        calendar.set(Calendar.YEAR, year);
+        calendar.set(Calendar.MONTH, month - 1);
+        return calendar.getActualMaximum(Calendar.DATE);
     }
 }

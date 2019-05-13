@@ -3,6 +3,7 @@ C:\xl\code\database_tool\src\main\java\com\unis\db\controller\MakeDataController
 C:\xl\code\database_tool\src\main\java\com\unis\db\controller\SearchController.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\dao\VehicleMapper.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\MakeDataService.java
+C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\RandomUtils.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\DateUtils.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\model\VehicleStructured.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\model\FaceArchive.java
@@ -21,7 +22,6 @@ C:\xl\code\database_tool\src\main\java\com\unis\db\config\HikariConfig.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\impl\CopyInDataService.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\enums\TableTypeEnum.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\model\TerminalFeature.java
-C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\ToolUtils.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\VehicleService.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\TableUtils.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\dao\impl\VehicleMapperImpl.java
