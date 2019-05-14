@@ -195,6 +195,18 @@ public class FaceSnapStructured {
      * 是否经过ia处理, 0:已处理；1：未处理
      */
     private Integer isIaDisposed;
+    /**
+     * 对应同一个人体的recordID
+     */
+    private Long extendID;
+
+    public Long getExtendID() {
+        return extendID;
+    }
+
+    public void setExtendID(Long extendID) {
+        this.extendID = extendID;
+    }
 
     public Long getRecordID() {
         return recordID;
@@ -620,6 +632,7 @@ public class FaceSnapStructured {
                 "," + isOpenEyes +
                 "," + isOpenMouth +
                 "," + imageReliability +
-                "," + isIaDisposed;
+                "," + isIaDisposed +
+                "," + extendID;
     }
 }

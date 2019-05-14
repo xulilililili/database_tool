@@ -18,13 +18,13 @@ import java.util.Random;
 public class TerminalFeatureServiceImpl implements TerminalFeatureService {
     private static final Logger logger = LoggerFactory.getLogger(TerminalFeatureServiceImpl.class);
 
-    private TerminalFeature terminalFeature=new TerminalFeature();
+    private TerminalFeature terminalFeature = new TerminalFeature();
     private Random random = new Random();
     /**
-    * 身份内容certificateCode
-    */
-    private static String[] CERTIFICATE_CODE=new String[]{"1234ds","xxccfdeww","xww3ed","737dhsyegd6y3","ddr3edrf4fd",
-                                            "334455fdctvt","xe3fdrfdf3","xedf43dwqf54f","xed32ded","xe33434f5g","we332dsdfr"};
+     * 身份内容certificateCode
+     */
+    private static String[] CERTIFICATE_CODE = new String[]{"1234ds", "xxccfdeww", "xww3ed", "737dhsyegd6y3", "ddr3edrf4fd",
+            "334455fdctvt", "xe3fdrfdf3", "xedf43dwqf54f", "xed32ded", "xe33434f5g", "we332dsdfr"};
 
     @Override
     public String makeTerminalFeatureData(long passTime, long recordID, boolean partitionState) {
@@ -32,7 +32,7 @@ public class TerminalFeatureServiceImpl implements TerminalFeatureService {
         terminalFeature.setMac(RandomUtils.getRandomMac());
         terminalFeature.setBrand("unis");
         terminalFeature.setCacheSsid("unis|huawei");
-        terminalFeature.setCaptureTime(passTime);
+        terminalFeature.setCaptureTime(passTime / 1000);
         terminalFeature.setTerminalFieldStrength("-23");
         terminalFeature.setIdentificationType(1);
         terminalFeature.setCertificateCode(CERTIFICATE_CODE[random.nextInt(CERTIFICATE_CODE.length)]);
@@ -44,8 +44,8 @@ public class TerminalFeatureServiceImpl implements TerminalFeatureService {
         terminalFeature.setyCoordinate("");
         terminalFeature.setNetbarWacode("1");
         terminalFeature.setCollectionEquipmentID("000000");
-        terminalFeature.setCollectionEquipmentLongitude(Double.toString(random.nextInt(9000000)/100000.0));
-        terminalFeature.setCollectionEquipmentLatitude(Double.toString(random.nextInt(18000000)/100000.0));
+        terminalFeature.setCollectionEquipmentLongitude(Double.toString(random.nextInt(9000000) / 100000.0));
+        terminalFeature.setCollectionEquipmentLatitude(Double.toString(random.nextInt(18000000) / 100000.0));
         String data = terminalFeature.toString();
         if (partitionState) {
             data = data + "," + DateUtils.longToString(terminalFeature.getCaptureTime(), "yyyy-MM-dd");

@@ -83,6 +83,7 @@ public class FaceSnapServiceImpl implements FaceSnapService {
         faceSnap.setIsOpenMouth(random.nextInt(2));
         faceSnap.setImageReliability(1);
         faceSnap.setIsIaDisposed(random.nextInt(2));
+        faceSnap.setExtendID(0L);
 
         String data = faceSnap.toString();
         if (partitionState) {

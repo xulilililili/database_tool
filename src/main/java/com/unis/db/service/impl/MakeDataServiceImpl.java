@@ -24,7 +24,7 @@ public class MakeDataServiceImpl implements MakeDataService {
     private static final Logger logger = LoggerFactory.getLogger(MakeDataServiceImpl.class);
 
     /**
-     * 数据库类型: gp ,pg
+     * 数据库类型: gp和pg
      */
     @Value("${generate.database-type}")
     private String databaseType;
@@ -51,9 +51,8 @@ public class MakeDataServiceImpl implements MakeDataService {
             int count = vehicleService.searchTotal(tableName);
             logger.info("[ INSERT DATA ] :{} finished with {}s and insert {} pieces of data ", tableName, cost, count);
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     @Override
@@ -74,9 +73,8 @@ public class MakeDataServiceImpl implements MakeDataService {
                 date = DateUtils.getDateByAdd(date, 1);
             }
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 
     @Override
@@ -102,6 +100,7 @@ public class MakeDataServiceImpl implements MakeDataService {
             } else {
                 return false;
             }
+            //日期+1天
             date = DateUtils.getDateByAdd(date, 1);
         }
         return true;

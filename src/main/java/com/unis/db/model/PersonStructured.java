@@ -8,239 +8,295 @@ public class PersonStructured {
     /**
      * 数据唯一标识
      */
-    private Long recordID ;
+    private Long recordID;
     /**
      * 人员标识
      */
-    private String personID ;
+    private String personID;
     /**
      * 设备编码
      */
-    private String deviceID ;
+    private String deviceID;
     /**
      * 抓拍时间
      */
-    private Long snapTimestamp ;
+    private Long snapTimestamp;
     /**
      * 人员左上角x坐标
      */
-    private Double leftTopX ;
+    private Double leftTopX;
     /**
      * 人员左上角y坐标
      */
-    private Double leftTopY ;
+    private Double leftTopY;
     /**
      * 人员右下角x坐标
      */
-    private Double rightBtmX ;
+    private Double rightBtmX;
     /**
      * 人员右下角y坐标
      */
-    private Double rightBtmY ;
+    private Double rightBtmY;
     /**
      * 人员出现时间
      */
-    private Long personAppearTime ;
+    private Long personAppearTime;
     /**
      * 人员消失时间
      */
-    private Long personDisappearTime ;
+    private Long personDisappearTime;
     /**
-     *  性别代码，见附录
+     * 性别代码，见附录
      */
-    private Integer genderCode ;
+    private Integer genderCode;
     /**
      * 年龄上限
      */
-    private Integer ageUpLimit ;
+    private Integer ageUpLimit;
     /**
      * 年龄下限
      */
-    private Integer ageLowerLimit ;
+    private Integer ageLowerLimit;
     /**
      * 民族代码，见附录
      */
-    private Integer ethicCode ;
+    private Integer ethicCode;
     /**
      * 同行人脸数
      */
-    private Integer accompanyNumber ;
+    private Integer accompanyNumber;
     /**
      * 肤色
      */
-    private Integer skinColor ;
+    private Integer skinColor;
     /**
      * 发型
      */
-    private Integer hairStyle ;
+    private Integer hairStyle;
     /**
      * 发色，见附录
      */
-    private Integer hairColor ;
+    private Integer hairColor;
     /**
      * 脸型
      */
-    private Integer faceStyle ;
+    private Integer faceStyle;
     /**
      * 脸部特征
      */
-    private String facialFeature ;
+    private String facialFeature;
     /**
      * 体貌特征
      */
-    private String physicalFeature ;
+    private String physicalFeature;
     /**
      * 伞颜色
      */
-    private Integer umbrellaColor ;
+    private Integer umbrellaColor;
     /**
      * 口罩颜色
      */
-    private Integer respiratorColor ;
+    private Integer respiratorColor;
     /**
      * 帽子款式
      */
-    private Integer capStyle ;
+    private Integer capStyle;
     /**
      * 帽子颜色
      */
-    private Integer capColor ;
+    private Integer capColor;
     /**
      * 眼镜款式
      */
-    private Integer glassStyle ;
+    private Integer glassStyle;
     /**
      * 眼镜颜色
      */
-    private Integer glassColor ;
+    private Integer glassColor;
     /**
      * 围巾颜色
      */
-    private Integer scarfColor ;
+    private Integer scarfColor;
     /**
      * 包款式
      */
-    private Integer bagStyle ;
+    private Integer bagStyle;
     /**
      * 包颜色
      */
-    private Integer bagColor ;
+    private Integer bagColor;
     /**
      * 上衣款式
      */
-    private Integer coatStyle ;
+    private Integer coatStyle;
     /**
      * 上衣颜色
      */
-    private Integer coatColor ;
+    private Integer coatColor;
     /**
      * 下衣款式
      */
-    private Integer trousersStyle ;
+    private Integer trousersStyle;
     /**
      * 下衣颜色
      */
-    private Integer trousersColor ;
+    private Integer trousersColor;
     /**
      * 鞋子款式
      */
-    private Integer shoesStyle ;
+    private Integer shoesStyle;
     /**
      * 鞋子颜色
      */
-    private Integer shoesColor ;
+    private Integer shoesColor;
     /**
      * 身高上限
      */
-    private Integer heightUpLimit ;
+    private Integer heightUpLimit;
     /**
      * 身高下限
      */
-    private Integer heightLowerLimit ;
+    private Integer heightLowerLimit;
     /**
      * 体型
      */
-    private Integer bodyType ;
+    private Integer bodyType;
     /**
      * 姿态
      */
-    private Integer gesture ;
+    private Integer gesture;
     /**
      * 状态
      */
-    private Integer status ;
+    private Integer status;
     /**
      * 体表特征
      */
-    private Integer bodyFeature ;
+    private Integer bodyFeature;
     /**
      * 习惯动作
      */
-    private Integer habitualMovement ;
+    private Integer habitualMovement;
     /**
      * 行为
      */
-    private Integer behavior ;
+    private Integer behavior;
     /**
      * 行为描述
      */
-    private String behaviorDescription ;
+    private String behaviorDescription;
     /**
      * 附属物
      */
-    private Integer appendant ;
+    private Integer appendant;
     /**
      * 附属物描述
      */
-    private String appendantDescription ;
+    private String appendantDescription;
     /**
      * 上衣长度
      */
-    private Integer coatLength ;
+    private Integer coatLength;
     /**
      * 裤子长度
      */
-    private Integer trousersLen ;
+    private Integer trousersLen;
     /**
      * 是否驾驶员
      */
-    private Integer isDriver ;
+    private Integer isDriver;
     /**
      * 车辆类型
      */
-    private Integer vehicleClass ;
+    private Integer vehicleClass;
     /**
      * 是否涉外人员
      */
-    private Integer isForeigner ;
+    private Integer isForeigner;
     /**
      * 护照证件种类
      */
-    private Integer passportType ;
+    private Integer passportType;
     /**
      * 出入境人员类别代码
      */
-    private String immigrantTypeCode ;
+    private String immigrantTypeCode;
     /**
      * 体表特殊标记
      */
-    private Integer bodySpecialMark ;
+    private Integer bodySpecialMark;
     /**
      * 图片质量
      */
-    private Integer imageReliability ;
+    private Integer imageReliability;
     /**
      * 图片url
      */
-    private String imageUrl ;
+    private String imageUrl;
     /**
      * 图片url部分
      */
-    private String imageUrlPart ;
+    private String imageUrlPart;
     /**
      * 更新时间
      */
-    private Integer storageTime ;
+    private Long storageTime;
+    /**
+     * 对应同一个人脸的recordID
+     */
+    private Long extendID;
+    /**
+     * 0：长发；1：短发；2：无发；3：未识别
+     */
+    private Integer hairLen;
+    /**
+     * 上衣纹理，见附录
+     */
+    private Integer coatGrain;
+    /**
+     * 是否抱小孩(0:否，1：是)
+     */
+    private Integer isHoldBaby;
+    /**
+     * 是否背小孩(0:否，1：是)
+     */
+    private Integer isCarryBaby;
+    /**
+     * 是否手推车(0：无；1：有)
+     */
+    private Integer isHandcart;
+    /**
+     * 是否拎东西(0：未拎东西；1：拎东西)
+     */
+    private Integer isCarryThings;
+    /**
+     * 是否打伞(0：未打伞；1：打伞)
+     */
+    private Integer isUmbrellaOpen;
+    /**
+     * 是否戴口罩，0：未戴；1：戴
+     */
+    private Integer isRespirator;
+    /**
+     * 是否戴眼镜，0：未戴；1：戴
+     */
+    private Integer isGlasses;
+    /**
+     * 是否戴帽子，0：未戴；1：戴
+     */
+    private Integer isCap;
+    /**
+     * 朝向，见附录
+     */
+    private Integer orientation;
+    /**
+     * 可能有多个包，不同的包类型
+     */
+    private Long bagsStyle;
+    /**
+     * 可能有多个包，是否背某些包
+     */
+    private Long bagsColor;
 
     public Long getRecordID() {
         return recordID;
@@ -706,17 +762,129 @@ public class PersonStructured {
         this.imageUrlPart = imageUrlPart;
     }
 
-    public Integer getStorageTime() {
+    public Long getStorageTime() {
         return storageTime;
     }
 
-    public void setStorageTime(Integer storageTime) {
+    public void setStorageTime(Long storageTime) {
         this.storageTime = storageTime;
+    }
+
+    public Long getExtendID() {
+        return extendID;
+    }
+
+    public void setExtendID(Long extendID) {
+        this.extendID = extendID;
+    }
+
+    public Integer getHairLen() {
+        return hairLen;
+    }
+
+    public void setHairLen(Integer hairLen) {
+        this.hairLen = hairLen;
+    }
+
+    public Integer getCoatGrain() {
+        return coatGrain;
+    }
+
+    public void setCoatGrain(Integer coatGrain) {
+        this.coatGrain = coatGrain;
+    }
+
+    public Integer getIsHoldBaby() {
+        return isHoldBaby;
+    }
+
+    public void setIsHoldBaby(Integer isHoldBaby) {
+        this.isHoldBaby = isHoldBaby;
+    }
+
+    public Integer getIsCarryBaby() {
+        return isCarryBaby;
+    }
+
+    public void setIsCarryBaby(Integer isCarryBaby) {
+        this.isCarryBaby = isCarryBaby;
+    }
+
+    public Integer getIsHandcart() {
+        return isHandcart;
+    }
+
+    public void setIsHandcart(Integer isHandcart) {
+        this.isHandcart = isHandcart;
+    }
+
+    public Integer getIsCarryThings() {
+        return isCarryThings;
+    }
+
+    public void setIsCarryThings(Integer isCarryThings) {
+        this.isCarryThings = isCarryThings;
+    }
+
+    public Integer getIsUmbrellaOpen() {
+        return isUmbrellaOpen;
+    }
+
+    public void setIsUmbrellaOpen(Integer isUmbrellaOpen) {
+        this.isUmbrellaOpen = isUmbrellaOpen;
+    }
+
+    public Integer getIsRespirator() {
+        return isRespirator;
+    }
+
+    public void setIsRespirator(Integer isRespirator) {
+        this.isRespirator = isRespirator;
+    }
+
+    public Integer getIsGlasses() {
+        return isGlasses;
+    }
+
+    public void setIsGlasses(Integer isGlasses) {
+        this.isGlasses = isGlasses;
+    }
+
+    public Integer getIsCap() {
+        return isCap;
+    }
+
+    public void setIsCap(Integer isCap) {
+        this.isCap = isCap;
+    }
+
+    public Integer getOrientation() {
+        return orientation;
+    }
+
+    public void setOrientation(Integer orientation) {
+        this.orientation = orientation;
+    }
+
+    public Long getBagsStyle() {
+        return bagsStyle;
+    }
+
+    public void setBagsStyle(Long bagsStyle) {
+        this.bagsStyle = bagsStyle;
+    }
+
+    public Long getBagsColor() {
+        return bagsColor;
+    }
+
+    public void setBagsColor(Long bagsColor) {
+        this.bagsColor = bagsColor;
     }
 
     @Override
     public String toString() {
-        return  recordID +
+        return recordID +
                 "," + personID +
                 "," + deviceID +
                 "," + snapTimestamp +
@@ -774,6 +942,20 @@ public class PersonStructured {
                 "," + imageReliability +
                 "," + imageUrl +
                 "," + imageUrlPart +
-                "," + storageTime ;
+                "," + storageTime +
+                "," + extendID +
+                "," + hairLen +
+                "," + coatGrain +
+                "," + isHoldBaby +
+                "," + isCarryBaby +
+                "," + isHandcart +
+                "," + isCarryThings +
+                "," + isUmbrellaOpen +
+                "," + isRespirator +
+                "," + isGlasses +
+                "," + isCap +
+                "," + orientation +
+                "," + bagsStyle +
+                "," + bagsColor;
     }
 }

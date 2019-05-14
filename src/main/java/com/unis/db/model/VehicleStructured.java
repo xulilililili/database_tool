@@ -158,6 +158,82 @@ public class VehicleStructured {
      * 打电话状态
      */
     private Integer calling;
+    /**
+     * 0：车头；1：车尾；2：侧面
+     */
+    private Integer vehicleAttitude;
+    /**
+     * 是否有香水瓶(0：无；1：有)
+     */
+    private Integer isPerfumeBottle;
+    /**
+     * 是否有挂饰(0：无；1：有)
+     */
+    private Integer isOrnament;
+    /**
+     * 是否有纸巾盒(0：无；1：有)
+     */
+    private Integer isTissue;
+    /**
+     * 是否有年检标(0：无；1：有)
+     */
+    private Integer isInspectionMark;
+    /**
+     * 是否有备胎(0：无；1：有)
+     */
+    private Integer isSpareWheel;
+    /**
+     * 是否渣土车(0：否；1：是)
+     */
+    private Integer isMuckCar;
+    /**
+     * 是否危化品车 (0：不是危化品车；1：是危化品车)
+     */
+    private Integer isHazardousTanker;
+    /**
+     * 是否渣土车(0：否；1：是)
+     */
+    private Integer isSunroof;
+    /**
+     * 车前部物品，当有多个时可用英文半角逗号分隔，见附录
+     */
+    private String vehicleFrontItem;
+    /**
+     * 对车前部物品数量、颜色、种类等信息描述
+     */
+    private String descOfFrontItem;
+    /**
+     * 0:没有撞痕；1:少量撞痕；2:大量撞痕
+     */
+    private Integer hitMarkInfo;
+    /**
+     * 对后视镜的描述
+     */
+    private String rearviewMirror;
+    /**
+     * 挂车车牌号
+     */
+    private String plateNoAttach;
+    /**
+     * 车窗描述
+     */
+    private String vehicleWindow;
+    /**
+     * 是否有行李架(0：无；1：有)
+     */
+    private Integer isLuggageRack;
+    /**
+     * 副驾驶遮阳板状态（0：收起； 1：放下）
+     */
+    private Integer coSunvisor;
+    /**
+     * 副驾驶安全带状态（0：未系； 1：有系）
+     */
+    private Integer coSafetyBelt;
+    /**
+     * 0：不是黄标车，1：是黄标车
+     */
+    private Integer isYellowLabel;
 
     public Integer getSunVisor() {
         return sunVisor;
@@ -463,6 +539,158 @@ public class VehicleStructured {
         this.viceDriverFace = viceDriverFace;
     }
 
+    public Integer getVehicleAttitude() {
+        return vehicleAttitude;
+    }
+
+    public void setVehicleAttitude(Integer vehicleAttitude) {
+        this.vehicleAttitude = vehicleAttitude;
+    }
+
+    public Integer getIsPerfumeBottle() {
+        return isPerfumeBottle;
+    }
+
+    public void setIsPerfumeBottle(Integer isPerfumeBottle) {
+        this.isPerfumeBottle = isPerfumeBottle;
+    }
+
+    public Integer getIsOrnament() {
+        return isOrnament;
+    }
+
+    public void setIsOrnament(Integer isOrnament) {
+        this.isOrnament = isOrnament;
+    }
+
+    public Integer getIsTissue() {
+        return isTissue;
+    }
+
+    public void setIsTissue(Integer isTissue) {
+        this.isTissue = isTissue;
+    }
+
+    public Integer getIsInspectionMark() {
+        return isInspectionMark;
+    }
+
+    public void setIsInspectionMark(Integer isInspectionMark) {
+        this.isInspectionMark = isInspectionMark;
+    }
+
+    public Integer getIsSpareWheel() {
+        return isSpareWheel;
+    }
+
+    public void setIsSpareWheel(Integer isSpareWheel) {
+        this.isSpareWheel = isSpareWheel;
+    }
+
+    public Integer getIsMuckCar() {
+        return isMuckCar;
+    }
+
+    public void setIsMuckCar(Integer isMuckCar) {
+        this.isMuckCar = isMuckCar;
+    }
+
+    public Integer getIsHazardousTanker() {
+        return isHazardousTanker;
+    }
+
+    public void setIsHazardousTanker(Integer isHazardousTanker) {
+        this.isHazardousTanker = isHazardousTanker;
+    }
+
+    public Integer getIsSunroof() {
+        return isSunroof;
+    }
+
+    public void setIsSunroof(Integer isSunroof) {
+        this.isSunroof = isSunroof;
+    }
+
+    public String getVehicleFrontItem() {
+        return vehicleFrontItem;
+    }
+
+    public void setVehicleFrontItem(String vehicleFrontItem) {
+        this.vehicleFrontItem = vehicleFrontItem;
+    }
+
+    public String getDescOfFrontItem() {
+        return descOfFrontItem;
+    }
+
+    public void setDescOfFrontItem(String descOfFrontItem) {
+        this.descOfFrontItem = descOfFrontItem;
+    }
+
+    public Integer getHitMarkInfo() {
+        return hitMarkInfo;
+    }
+
+    public void setHitMarkInfo(Integer hitMarkInfo) {
+        this.hitMarkInfo = hitMarkInfo;
+    }
+
+    public String getRearviewMirror() {
+        return rearviewMirror;
+    }
+
+    public void setRearviewMirror(String rearviewMirror) {
+        this.rearviewMirror = rearviewMirror;
+    }
+
+    public String getPlateNoAttach() {
+        return plateNoAttach;
+    }
+
+    public void setPlateNoAttach(String plateNoAttach) {
+        this.plateNoAttach = plateNoAttach;
+    }
+
+    public String getVehicleWindow() {
+        return vehicleWindow;
+    }
+
+    public void setVehicleWindow(String vehicleWindow) {
+        this.vehicleWindow = vehicleWindow;
+    }
+
+    public Integer getIsLuggageRack() {
+        return isLuggageRack;
+    }
+
+    public void setIsLuggageRack(Integer isLuggageRack) {
+        this.isLuggageRack = isLuggageRack;
+    }
+
+    public Integer getCoSunvisor() {
+        return coSunvisor;
+    }
+
+    public void setCoSunvisor(Integer coSunvisor) {
+        this.coSunvisor = coSunvisor;
+    }
+
+    public Integer getCoSafetyBelt() {
+        return coSafetyBelt;
+    }
+
+    public void setCoSafetyBelt(Integer coSafetyBelt) {
+        this.coSafetyBelt = coSafetyBelt;
+    }
+
+    public Integer getIsYellowLabel() {
+        return isYellowLabel;
+    }
+
+    public void setIsYellowLabel(Integer isYellowLabel) {
+        this.isYellowLabel = isYellowLabel;
+    }
+
     @Override
     public String toString() {
         return recordID +
@@ -502,6 +730,25 @@ public class VehicleStructured {
                 "," + viceDriverFace +
                 "," + sunVisor +
                 "," + safetyBelt +
-                "," + calling;
+                "," + calling +
+                "," + vehicleAttitude +
+                "," + isPerfumeBottle +
+                "," + isOrnament +
+                "," + isTissue +
+                "," + isInspectionMark +
+                "," + isSpareWheel +
+                "," + isMuckCar +
+                "," + isHazardousTanker +
+                "," + isSunroof +
+                "," + vehicleFrontItem +
+                "," + descOfFrontItem +
+                "," + hitMarkInfo +
+                "," + rearviewMirror +
+                "," + plateNoAttach +
+                "," + vehicleWindow +
+                "," + isLuggageRack +
+                "," + coSunvisor +
+                "," + coSafetyBelt +
+                "," + isYellowLabel;
     }
 }

@@ -1,5 +1,6 @@
 package com.unis.db.common.utils;
 
+import com.unis.db.common.enums.VehicleEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,22 +24,6 @@ public class RandomUtils {
     private static final long RANDOM_DIGIT = 17;
     private static final long NODE_DIGIT = 12;
     private static final long PASS_TIME_GET = ((1L << PASS_TIME_DIGIT) - 1) << RANDOM_DIGIT;
-
-    /**
-     * 创建plateNo相关参数
-     */
-    private static final String[] VEHICLE_PROVINCE = {"桂", "闽", "粤", "冀", "京", "晋", "蒙", "辽", "吉", "津", "黑", "苏", "皖", "沪", "渝", "川", "云", "贵", "陕", "鲁", "浙"};
-    private static final String[] VEHICLE_SECOND = {"A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L"};
-    private static final String[] VEHICLE_RANDOM = {"A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
-    private static final String[] VEHICLE_NUM = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
-    private static final String[] VEHICLE_SMALL_NUM1 = {"1", "2", "3", "4", "5"};
-
-    /**
-     * 创建deviceID相关参数
-     */
-    private static final String DEVICE_PREFIX = "50010500001191000";
-    private static final String TOLLGATE_PREFIX = "50010500001211000";
-    private static final String[] DEVICE_SUFFIX = {"086", "087", "089", "090", "092", "093", "094", "095", "096", "097", "098", "099", "100", "101", "102", "103", "104", "105", "106", "107", "108", "109", "110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120", "121", "122", "123", "124", "125", "126", "127", "128", "129", "130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "140", "141", "142", "143", "144", "145", "146", "147", "148", "149", "150", "151", "152", "153", "154", "155", "156", "157", "158", "159", "160", "161", "162", "163", "164", "165", "166", "167", "168", "169", "170", "171", "172", "173", "174", "175", "176", "177", "178", "179", "180", "181", "182", "183", "184", "185", "186", "187", "188", "189", "190"};
 
     private static Random random = new Random();
 
@@ -157,16 +142,16 @@ public class RandomUtils {
     public static String getRandomPlateNo() {
         int num = random.nextInt(40);
         String province = "浙";
-        if (num < VEHICLE_PROVINCE.length) {
-            province = VEHICLE_PROVINCE[num];
+        if (num < VehicleEnum.VEHICLE_PROVINCE.length) {
+            province = VehicleEnum.VEHICLE_PROVINCE[num];
         }
         return province +
-                VEHICLE_SECOND[random.nextInt(VEHICLE_SECOND.length)] +
-                VEHICLE_NUM[random.nextInt(VEHICLE_NUM.length)] +
-                VEHICLE_RANDOM[random.nextInt(VEHICLE_RANDOM.length)] +
-                VEHICLE_SMALL_NUM1[random.nextInt(VEHICLE_SMALL_NUM1.length)] +
-                VEHICLE_SECOND[random.nextInt(VEHICLE_SECOND.length)] +
-                VEHICLE_NUM[random.nextInt(VEHICLE_NUM.length)];
+                VehicleEnum.VEHICLE_SECOND[random.nextInt(VehicleEnum.VEHICLE_SECOND.length)] +
+                VehicleEnum.VEHICLE_NUM[random.nextInt(VehicleEnum.VEHICLE_NUM.length)] +
+                VehicleEnum.VEHICLE_RANDOM[random.nextInt(VehicleEnum.VEHICLE_RANDOM.length)] +
+                VehicleEnum.VEHICLE_SMALL_NUM1[random.nextInt(VehicleEnum.VEHICLE_SMALL_NUM1.length)] +
+                VehicleEnum.VEHICLE_SECOND[random.nextInt(VehicleEnum.VEHICLE_SECOND.length)] +
+                VehicleEnum.VEHICLE_NUM[random.nextInt(VehicleEnum.VEHICLE_NUM.length)];
     }
 
     /**
@@ -176,10 +161,10 @@ public class RandomUtils {
      * @return 拼接后的设备id
      */
     public static String getRandomDeviceIds(int number) {
-        int startNum = random.nextInt(DEVICE_SUFFIX.length - number);
+        int startNum = random.nextInt(VehicleEnum.DEVICE_SUFFIX.length - number);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < number; i++) {
-            sb.append("'").append(DEVICE_PREFIX).append(DEVICE_SUFFIX[startNum++]).append("',");
+            sb.append("'").append(VehicleEnum.DEVICE_PREFIX).append(VehicleEnum.DEVICE_SUFFIX[startNum++]).append("',");
         }
         sb.deleteCharAt(sb.length() - 1);
         return sb.toString();

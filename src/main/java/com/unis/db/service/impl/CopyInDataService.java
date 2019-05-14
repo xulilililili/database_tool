@@ -21,8 +21,6 @@ import java.util.concurrent.Callable;
 
 public class CopyInDataService implements Callable {
 
-    private static final Logger logger = LoggerFactory.getLogger(CopyInDataService.class);
-
     private VehicleService vehicleService = new VehicleServiceImpl();
 
     private FaceSnapService faceSnapService = new FaceSnapServiceImpl();
