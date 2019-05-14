@@ -3,6 +3,7 @@ C:\xl\code\database_tool\src\main\java\com\unis\db\controller\MakeDataController
 C:\xl\code\database_tool\src\main\java\com\unis\db\controller\SearchController.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\dao\VehicleMapper.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\MakeDataService.java
+C:\xl\code\database_tool\src\main\java\com\unis\db\common\enums\PersonEnum.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\RandomUtils.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\DateUtils.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\model\VehicleStructured.java
@@ -10,6 +11,7 @@ C:\xl\code\database_tool\src\main\java\com\unis\db\model\FaceArchive.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\impl\CopyInDataByFile.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\PersonService.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\common\utils\HikariUtils.java
+C:\xl\code\database_tool\src\main\java\com\unis\db\common\enums\VehicleEnum.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\MakeDataApplication.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\FaceSnapService.java
 C:\xl\code\database_tool\src\main\java\com\unis\db\service\impl\VehicleServiceImpl.java

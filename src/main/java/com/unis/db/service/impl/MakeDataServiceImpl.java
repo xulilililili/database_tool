@@ -64,12 +64,18 @@ public class MakeDataServiceImpl implements MakeDataService {
         String month = useByConditions.getStartDate().substring(0, 6);
         vehicleService.executeCreateProc(procName, algorithm, month);
         String partitionTableName = String.format("%s_%s_%s", baseTableName, algorithm, month);
+        if(type.equals(TableTypeEnum.TerminalFeature.getType())){
+            partitionTableName = String.format("%s_%s", baseTableName, month);
+        }
         if (useThread(partitionTableName, true, month, useByConditions)) {
             int maxDay = DateUtils.getMaxDate(month);
             String date = month + "01";
             for (int i = 0; i < maxDay; i++) {
                 String tableName = String.format("%s_%s_%s", baseTableName, algorithm, date);
-                vehicleService.createIndex(tableName,type);
+                if(type.equals(TableTypeEnum.TerminalFeature.getType())){
+                    tableName = String.format("%s_%s", baseTableName, date);
+                }
+                vehicleService.createIndex(tableName, type);
                 date = DateUtils.getDateByAdd(date, 1);
             }
             return true;
@@ -88,6 +94,9 @@ public class MakeDataServiceImpl implements MakeDataService {
         String baseTableName = TableTypeEnum.getTableNameByType(type);
         for (int j = 0; j < days; j++) {
             String tableName = String.format("%s_%s_%s", baseTableName, algorithm, date);
+            if(type.equals(TableTypeEnum.TerminalFeature.getType())){
+                tableName = String.format("%s_%s", baseTableName, date);
+            }
             vehicleService.createTableLike(tableName, baseTableName, index);
             if (useThread(tableName, false, date, useByConditions)) {
                 if (DatabaseTypeEnum.GP.getType().equals(databaseType)) {
@@ -95,7 +104,7 @@ public class MakeDataServiceImpl implements MakeDataService {
                     vehicleService.executeCreateProc(procName, algorithm, date);
                     vehicleService.dropTable(String.format("%s_%s_%s", baseTableName, algorithm, DateUtils.getDateByAdd(date, -remainDate)));
                 } else {
-                    vehicleService.createIndex(tableName,type);
+                    vehicleService.createIndex(tableName, type);
                 }
             } else {
                 return false;

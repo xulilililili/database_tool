@@ -66,7 +66,7 @@ public class CopyInDataService implements Callable {
                     case "vehicle":
                         dataList.add(vehicleService.makeVehicleData(passTime, recordID, partitionState));
                         break;
-                    case "face_snap":
+                    case "facesnap":
                         dataList.add(faceSnapService.makeFaceSnapData(passTime, recordID, partitionState));
                         break;
                     case "person":

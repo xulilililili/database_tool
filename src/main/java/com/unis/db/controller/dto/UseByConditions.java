@@ -22,8 +22,7 @@ public class UseByConditions {
     /**
      * 算法版本
      */
-    @NotNull(message = "算法版本为空", groups = {MakeDataGroup.class, SearchGroup.class})
-    private String algorithm;
+    private String algorithm = "a050200";
 
     /**
      * 起始日期
