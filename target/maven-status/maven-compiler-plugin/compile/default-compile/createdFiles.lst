@@ -1,6 +1,9 @@
+com\unis\db\controller\dto\UseByConditions$MakeDataGroup.class
 com\unis\db\common\task\SchedulerTask.class
 com\unis\db\service\impl\PersonServiceImpl.class
+com\unis\db\controller\dto\UseByConditions.class
 com\unis\db\service\impl\MakeDataServiceImpl.class
+com\unis\db\controller\dto\UseByConditions$SearchGroup.class
 com\unis\db\service\impl\VehicleServiceImpl.class
 com\unis\db\model\VehicleStructured.class
 com\unis\db\common\utils\TableUtils.class

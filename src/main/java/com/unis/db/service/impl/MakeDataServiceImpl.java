@@ -59,12 +59,13 @@ public class MakeDataServiceImpl implements MakeDataService {
     public Boolean makeDataByPartition(UseByConditions useByConditions) {
         String algorithm = useByConditions.getAlgorithm();
         String type = useByConditions.getType();
+        boolean index = useByConditions.isIndex();
         String baseTableName = TableTypeEnum.getTableNameByType(type);
         String procName = String.format("%s_create_partition_proc", baseTableName);
         String month = useByConditions.getStartDate().substring(0, 6);
         vehicleService.executeCreateProc(procName, algorithm, month);
         String partitionTableName = String.format("%s_%s_%s", baseTableName, algorithm, month);
-        if(type.equals(TableTypeEnum.TerminalFeature.getType())){
+        if (type.equals(TableTypeEnum.TerminalFeature.getType())) {
             partitionTableName = String.format("%s_%s", baseTableName, month);
         }
         if (useThread(partitionTableName, true, month, useByConditions)) {
@@ -72,10 +73,12 @@ public class MakeDataServiceImpl implements MakeDataService {
             String date = month + "01";
             for (int i = 0; i < maxDay; i++) {
                 String tableName = String.format("%s_%s_%s", baseTableName, algorithm, date);
-                if(type.equals(TableTypeEnum.TerminalFeature.getType())){
+                if (type.equals(TableTypeEnum.TerminalFeature.getType())) {
                     tableName = String.format("%s_%s", baseTableName, date);
                 }
-                vehicleService.createIndex(tableName, type);
+                if (!index) {
+                    vehicleService.createIndex(tableName, type);
+                }
                 date = DateUtils.getDateByAdd(date, 1);
             }
             return true;
@@ -94,7 +97,7 @@ public class MakeDataServiceImpl implements MakeDataService {
         String baseTableName = TableTypeEnum.getTableNameByType(type);
         for (int j = 0; j < days; j++) {
             String tableName = String.format("%s_%s_%s", baseTableName, algorithm, date);
-            if(type.equals(TableTypeEnum.TerminalFeature.getType())){
+            if (type.equals(TableTypeEnum.TerminalFeature.getType())) {
                 tableName = String.format("%s_%s", baseTableName, date);
             }
             vehicleService.createTableLike(tableName, baseTableName, index);
@@ -102,9 +105,11 @@ public class MakeDataServiceImpl implements MakeDataService {
                 if (DatabaseTypeEnum.GP.getType().equals(databaseType)) {
                     String procName = String.format("%s_create_index_proc", baseTableName);
                     vehicleService.executeCreateProc(procName, algorithm, date);
-                    vehicleService.dropTable(String.format("%s_%s_%s", baseTableName, algorithm, DateUtils.getDateByAdd(date, -remainDate)));
+                    //vehicleService.dropTable(String.format("%s_%s_%s", baseTableName, algorithm, DateUtils.getDateByAdd(date, -remainDate)));
                 } else {
-                    vehicleService.createIndex(tableName, type);
+                    if (!index) {
+                        vehicleService.createIndex(tableName, type);
+                    }
                 }
             } else {
                 return false;
