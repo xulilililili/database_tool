@@ -106,13 +106,13 @@ public class MakeDataServiceImpl implements MakeDataService {
                     String procName = String.format("%s_create_index_proc", baseTableName);
                     vehicleService.executeCreateProc(procName, algorithm, date);
                     //vehicleService.dropTable(String.format("%s_%s_%s", baseTableName, algorithm, DateUtils.getDateByAdd(date, -remainDate)));
-                } else {
+                } else{
                     if (!index) {
                         vehicleService.createIndex(tableName, type);
                     }
                 }
             } else {
-                return false;
+
             }
             //日期+1天
             date = DateUtils.getDateByAdd(date, 1);
