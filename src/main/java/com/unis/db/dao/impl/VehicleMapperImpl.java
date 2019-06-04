@@ -35,7 +35,7 @@ public class VehicleMapperImpl implements VehicleMapper {
         Long startTime = System.currentTimeMillis();
         jdbcTemplate.execute(sql);
         Long endTime = System.currentTimeMillis();
-        logger.info("[ SELECT * ]:{} finished with {}s", sql, (endTime - startTime) / 1000.0);
+        //logger.info("[ SELECT * ]:{} finished with {}s", sql, (endTime - startTime) / 1000.0);
         return (endTime - startTime) / 1000.0;
     }
 

@@ -112,7 +112,7 @@ public class MakeDataServiceImpl implements MakeDataService {
                     }
                 }
             } else {
-
+                return false;
             }
             //日期+1天
             date = DateUtils.getDateByAdd(date, 1);

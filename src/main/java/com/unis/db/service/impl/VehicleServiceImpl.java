@@ -148,7 +148,7 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public double getRecordIdPartition(String tableName, String startDate, String endDate) {
-        String sql = String.format("select recordid from %s where cur_date between '%s' and '%s' offset 1000 limit 100", tableName, startDate, endDate);
+        String sql = String.format("select recordid from %s where cur_date between '%s' and '%s' offset 1000 limit 50", tableName, startDate, endDate);
         List<Long> recordIdList = vehicleMapper.getRecordId(sql);
         StringBuilder sb = new StringBuilder();
         for (long recordId : recordIdList) {
