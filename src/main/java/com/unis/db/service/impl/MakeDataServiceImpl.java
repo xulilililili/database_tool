@@ -1,13 +1,12 @@
 package com.unis.db.service.impl;
 
 import com.unis.db.common.utils.DateUtils;
-import com.unis.db.common.utils.RandomUtils;
 import com.unis.db.common.utils.ThreadUtils;
 import com.unis.db.common.enums.TableTypeEnum;
 import com.unis.db.common.enums.DatabaseTypeEnum;
 import com.unis.db.controller.dto.UseByConditions;
 import com.unis.db.service.MakeDataService;
-import com.unis.db.service.VehicleService;
+import com.unis.db.service.TypeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +32,7 @@ public class MakeDataServiceImpl implements MakeDataService {
     private ThreadUtils threadUtils;
 
     @Autowired
-    VehicleService vehicleService;
+    TypeService typeService;
 
     @Override
     public Boolean useThread(String tableName, boolean partitionState, String date, UseByConditions useByConditions) {
@@ -48,7 +47,7 @@ public class MakeDataServiceImpl implements MakeDataService {
         }
         if (threadUtils.waitTask(threadNum)) {
             double cost = (System.currentTimeMillis() - begin) / 1000.0;
-            int count = vehicleService.searchTotal(tableName);
+            int count = typeService.searchTotal(tableName);
             logger.info("[ INSERT DATA ] :{} finished with {}s and insert {} pieces of data ", tableName, cost, count);
             return true;
         }
@@ -63,7 +62,7 @@ public class MakeDataServiceImpl implements MakeDataService {
         String baseTableName = TableTypeEnum.getTableNameByType(type);
         String procName = String.format("%s_create_partition_proc", baseTableName);
         String month = useByConditions.getStartDate().substring(0, 6);
-        vehicleService.executeCreateProc(procName, algorithm, month);
+        typeService.executeCreateProc(procName, algorithm, month);
         String partitionTableName = String.format("%s_%s_%s", baseTableName, algorithm, month);
         if (type.equals(TableTypeEnum.TerminalFeature.getType())) {
             partitionTableName = String.format("%s_%s", baseTableName, month);
@@ -77,7 +76,7 @@ public class MakeDataServiceImpl implements MakeDataService {
                     tableName = String.format("%s_%s", baseTableName, date);
                 }
                 if (!index) {
-                    vehicleService.createIndex(tableName, type);
+                    typeService.createPgIndex(tableName, type);
                 }
                 date = DateUtils.getDateByAdd(date, 1);
             }
@@ -95,20 +94,23 @@ public class MakeDataServiceImpl implements MakeDataService {
         int remainDate = useByConditions.getRemainDate();
         String type = useByConditions.getType();
         String baseTableName = TableTypeEnum.getTableNameByType(type);
+        //按天建表，创建完之后创建索引
         for (int j = 0; j < days; j++) {
             String tableName = String.format("%s_%s_%s", baseTableName, algorithm, date);
             if (type.equals(TableTypeEnum.TerminalFeature.getType())) {
                 tableName = String.format("%s_%s", baseTableName, date);
             }
-            vehicleService.createTableLike(tableName, baseTableName, index);
+            typeService.createTableLike(tableName, baseTableName, index);
             if (useThread(tableName, false, date, useByConditions)) {
+                //判断gp和pg
                 if (DatabaseTypeEnum.GP.getType().equals(databaseType)) {
                     String procName = String.format("%s_create_index_proc", baseTableName);
-                    vehicleService.executeCreateProc(procName, algorithm, date);
-                    //vehicleService.dropTable(String.format("%s_%s_%s", baseTableName, algorithm, DateUtils.getDateByAdd(date, -remainDate)));
+                    //创建gp索引
+                    typeService.executeCreateProc(procName, algorithm, date);
+                    typeService.dropTable(String.format("%s_%s_%s", baseTableName, algorithm, DateUtils.getDateByAdd(date, -remainDate)));
                 } else{
                     if (!index) {
-                        vehicleService.createIndex(tableName, type);
+                        typeService.createPgIndex(tableName, type);
                     }
                 }
             } else {

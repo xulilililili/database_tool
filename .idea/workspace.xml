@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bf28c2c-9460-4797-ac9a-b410d977a34d" name="Default Changelist" comment="修改">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/TypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/VehicleMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/VehicleMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/VehicleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/VehicleMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/database_tool.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/common/task/SchedulerTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/common/task/SchedulerTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/dao/VehicleMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/dao/impl/VehicleMapperImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/MakeDataServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/MakeDataServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/VehicleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/VehicleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/VehicleServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/database_tool-1.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/database_tool-1.0.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/database_tool-1.0.1.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/database_tool-1.0.1.jar.original" afterDir="false" />
     </list>
@@ -42,53 +52,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="149" column="1" lean-forward="true" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="46">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="116" column="41" lean-forward="true" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="41" />
+            <state relative-caret-position="385">
+              <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,10 +71,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/VehicleMapperImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+            <state relative-caret-position="327">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,24 +92,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="49" column="45" lean-forward="true" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
+            <state relative-caret-position="315">
+              <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/RandomUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="117" column="100" lean-forward="true" selection-start-line="117" selection-start-column="70" selection-end-line="117" selection-end-column="100" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#923#950#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,6 +128,8 @@
       <find>车辆类型</find>
       <find>getRandomPassTime</find>
       <find>CastUtil</find>
+      <find>vehicleMapper</find>
+      <find>vehicleService</find>
     </findStrings>
     <replaceStrings>
       <replace>Connection connection = JdbcUtils.getConnection();</replace>
@@ -164,6 +138,8 @@
       <replace />
       <replace>HikariUtils</replace>
       <replace>CastUtils</replace>
+      <replace>typeMapper</replace>
+      <replace>typeService</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -172,9 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/dao/VehicleMapperImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/CopyInDataTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/CopyInDataService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/CopyInDataByFile.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/MakeDataApplication.java" />
@@ -195,16 +168,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/PersonController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/ToolController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/TableUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/TerminalFeature.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TerminalFeatureImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/model/TerminalFeature.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/enums/TableTypeEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/MakeDataService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ToolUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/DateUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TerminalFeatureServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/enums/VehicleParameter.java" />
@@ -219,10 +189,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/CastUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/VehicleMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/TypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java" />
       </list>
     </option>
   </component>
@@ -250,8 +226,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1639" />
-    <option name="y" value="16" />
+    <option name="x" value="1585" />
+    <option name="y" value="21" />
     <option name="width" value="1407" />
     <option name="height" value="810" />
   </component>
@@ -305,6 +281,35 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="task" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -336,6 +341,32 @@
               <item name="dao" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="database_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -351,12 +382,12 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559267531377" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560137605018" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../database_tool01/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
@@ -516,7 +547,7 @@
       <workItem from="1558082847927" duration="696000" />
       <workItem from="1558178107867" duration="3479000" />
       <workItem from="1558418542955" duration="25933000" />
-      <workItem from="1559269641570" duration="12388000" />
+      <workItem from="1559269641570" duration="26727000" />
     </task>
     <task id="LOCAL-00001" summary="修改">
       <created>1556523012421</created>
@@ -555,7 +586,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="534484000" />
+    <option name="totallyTimeSpent" value="548823000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -567,10 +598,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1639" y="16" width="1407" height="810" extended-state="0" />
+    <frame x="1585" y="21" width="1407" height="810" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.59006214" visible="true" weight="0.24834193" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.59006214" visible="true" weight="0.24834193" />
       <window_info id="Structure" order="1" sideWeight="0.4099379" side_tool="true" weight="0.22698525" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -580,7 +611,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850942" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8793829" visible="true" weight="0.33236995" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8793829" weight="0.28323698" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4680851" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -589,7 +620,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50070125" side_tool="true" weight="0.32907802" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49929875" weight="0.32456142" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49929875" weight="0.3236994" />
       <window_info anchor="bottom" id="Problems" order="12" weight="0.32907802" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
@@ -597,7 +628,7 @@
       <window_info anchor="bottom" id="Tail" order="16" />
       <window_info anchor="bottom" id="Sequence" order="17" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964131" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24907885" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" weight="0.23876198" />
       <window_info anchor="right" id="Palette" order="4" />
@@ -659,15 +690,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar!/javax/validation/constraints/NotNull.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/FaceSnapController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/PersonController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/config/JdbcPool.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/thread/FixedThreadPoolTest.java" />
@@ -676,27 +698,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/thread/ThreadSql.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/JdbcUtils.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/thread/FixedThreadPool.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/SpringUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-400">
           <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/VehicleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
@@ -838,33 +843,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/CastUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#1702#1703#0" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
-            <element signature="e#2657#2658#0" expanded="true" />
-            <element signature="e#2705#2706#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataByFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/MakeDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -877,16 +859,6 @@
             <element signature="e#3658#3659#0" expanded="true" />
             <element signature="e#3704#3705#0" expanded="true" />
             <element signature="e#3744#3745#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ThreadUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -905,13 +877,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1028,16 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/TableUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3">
@@ -1058,57 +1013,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ThreadUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="370">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/CastUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="114" column="29" lean-forward="true" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+        <state relative-caret-position="800">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="149" column="1" lean-forward="true" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
+        <state relative-caret-position="225">
+          <caret line="65" column="32" lean-forward="true" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/MakeDataApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/MakeDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/TableUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/VehicleMapperImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state relative-caret-position="332">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1117,8 +1121,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="116" column="41" lean-forward="true" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="41" />
+        <state relative-caret-position="-979">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/TypeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#923#950#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
