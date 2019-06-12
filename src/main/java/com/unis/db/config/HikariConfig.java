@@ -22,7 +22,7 @@ public class HikariConfig {
     @Value("${spring.datasource.driver-class-name}")
     private String driverClassName;
 
-    private static final int MAX_POOL_SIZE = 10;
+    private static final int MAX_POOL_SIZE = 20;
 
     @Bean
     public HikariDataSource dataSource() {

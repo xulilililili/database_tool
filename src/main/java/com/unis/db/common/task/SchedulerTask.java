@@ -20,9 +20,6 @@ public class SchedulerTask {
 
     private final static String TYPE = "vehicle";
 
-    @Autowired
-    TypeMapper vehicleMapper;
-
     private Random random = new Random();
 
     /**
@@ -40,7 +37,7 @@ public class SchedulerTask {
     /**
      * 定时器2分钟查询一次，表是正在插入数据的表(根据留存期排序过后是第1张表)，recordid是随机选取
      */
-    @Scheduled(cron = "0 0/2 * * * ? ")
+    //@Scheduled(cron = "0 0/2 * * * ? ")
     public void queryInsertingTableTask() {
         String field = "recordid";
         String tableName = getTableName(remainDate + 1);
@@ -52,7 +49,7 @@ public class SchedulerTask {
     /**
      * 定时器每分钟查询一次，表在150张表中随机挑选表，recordid是随机选取
      */
-    @Scheduled(cron = "30 * * * * ? ")
+    //@Scheduled(cron = "30 * * * * ? ")
     public void queryRecordIDTask() {
         String field = "recordid";
         //随机值的取法需要过滤第一个表和最后一个表
@@ -66,7 +63,7 @@ public class SchedulerTask {
     /**
      * 定时器每每分钟查询一次，表在150张表中随机挑选，车牌是随机生成
      */
-    @Scheduled(cron = "45 * * * * ? ")
+    //@Scheduled(cron = "45 * * * * ? ")
     public void queryPlateNoTask() {
         String field = "plateno";
         //随机值的取法需要过滤第一个表和最后一个表

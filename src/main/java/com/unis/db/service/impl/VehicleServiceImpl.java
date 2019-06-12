@@ -100,62 +100,67 @@ public class VehicleServiceImpl implements VehicleService {
     }
 
     @Override
-    public double searchVehicleStructured(String tableName, String startDate, String endDate, int number) {
-        String sql = String.format("select * from %s where cur_date between '%s' and '%s' ", tableName, startDate, endDate);
-        String sql01 = " order by passtime,recordid limit 100 offset 0 ";
-        Random random = new Random();
+    public String spliceRandomSql(String prefixSql, String suffixSql, int number) {
         String fullSql;
         switch (number) {
             case 0:
-                fullSql = sql;
+                fullSql = prefixSql;
                 break;
             case 1:
-                fullSql = String.format("%s and plateno = '%s' %s", sql, RandomUtils.getRandomPlateNo(), sql01);
+                fullSql = String.format("%s and plateno = '%s' %s", prefixSql, RandomUtils.getRandomPlateNo(), suffixSql);
                 break;
             case 2:
-                fullSql = String.format("%s and plateno like '%s%%' %s", sql, RandomUtils.getRandomPlateNo().substring(0, 4), sql01);
+                fullSql = String.format("%s and plateno like '%s%%' %s", prefixSql, RandomUtils.getRandomPlateNo().substring(0, 4), suffixSql);
                 break;
             case 3:
-                fullSql = String.format("%s and plateno like '%%%s' %s", sql, RandomUtils.getRandomPlateNo().substring(3, 7), sql01);
+                fullSql = String.format("%s and plateno like '%%%s' %s", prefixSql, RandomUtils.getRandomPlateNo().substring(3, 7), suffixSql);
                 break;
             case 4:
-                fullSql = String.format("%s and plateno like '%%%s%%' %s", sql, RandomUtils.getRandomPlateNo().substring(2, 6), sql01);
+                fullSql = String.format("%s and plateno like '%%%s%%' %s", prefixSql, RandomUtils.getRandomPlateNo().substring(2, 6), suffixSql);
                 break;
             case 5:
                 fullSql = String.format("%s and deviceid in (%s) and vehiclecolor = %s and vehicleclass = '%s' %s"
-                        , sql, RandomUtils.getRandomDeviceIds(10), VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
-                        VehicleEnum.VEHICLE_CLASS[random.nextInt(VehicleEnum.VEHICLE_CLASS.length)], sql01);
+                        , prefixSql, RandomUtils.getRandomDeviceIds(20), VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
+                        VehicleEnum.VEHICLE_CLASS[random.nextInt(VehicleEnum.VEHICLE_CLASS.length)], suffixSql);
                 break;
             case 6:
                 fullSql = String.format("%s and deviceid in (%s) and vehiclecolor = %s and vehicleclass = '%s' %s"
-                        , sql, RandomUtils.getRandomDeviceIds(20), VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
-                        VehicleEnum.VEHICLE_CLASS[random.nextInt(VehicleEnum.VEHICLE_CLASS.length)], sql01);
+                        , prefixSql, RandomUtils.getRandomDeviceIds(40), VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
+                        VehicleEnum.VEHICLE_CLASS[random.nextInt(VehicleEnum.VEHICLE_CLASS.length)], suffixSql);
                 break;
             case 7:
                 fullSql = String.format("%s and deviceid in (%s) and vehiclecolor = %s and vehicleclass = '%s' and plateclass = %s %s"
-                        , sql, RandomUtils.getRandomDeviceIds(10), VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
-                        VehicleEnum.VEHICLE_CLASS[random.nextInt(VehicleEnum.VEHICLE_CLASS.length)], VehicleEnum.PLATE_CLASS[random.nextInt(VehicleEnum.PLATE_CLASS.length)], sql01);
+                        , prefixSql, RandomUtils.getRandomDeviceIds(20), VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
+                        VehicleEnum.VEHICLE_CLASS[random.nextInt(VehicleEnum.VEHICLE_CLASS.length)], VehicleEnum.PLATE_CLASS[random.nextInt(VehicleEnum.PLATE_CLASS.length)], suffixSql);
                 break;
             case 8:
                 fullSql = String.format("%s and deviceid in (%s) and vehiclecolor = %s and vehicleclass = '%s' and plateclass = %s %s"
-                        , sql, RandomUtils.getRandomDeviceIds(20), VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
-                        VehicleEnum.VEHICLE_CLASS[random.nextInt(VehicleEnum.VEHICLE_CLASS.length)], VehicleEnum.PLATE_CLASS[random.nextInt(VehicleEnum.PLATE_CLASS.length)], sql01);
+                        , prefixSql, RandomUtils.getRandomDeviceIds(40), VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
+                        VehicleEnum.VEHICLE_CLASS[random.nextInt(VehicleEnum.VEHICLE_CLASS.length)], VehicleEnum.PLATE_CLASS[random.nextInt(VehicleEnum.PLATE_CLASS.length)], suffixSql);
                 break;
             case 9:
                 fullSql = String.format("%s and vehiclecolor = %s and vehicleclass = '%s'  %s"
-                        , sql, VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
-                        VehicleEnum.VEHICLE_CLASS[random.nextInt(VehicleEnum.VEHICLE_CLASS.length)], sql01);
+                        , prefixSql, VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
+                        VehicleEnum.VEHICLE_CLASS[random.nextInt(VehicleEnum.VEHICLE_CLASS.length)], suffixSql);
                 break;
             case 10:
                 fullSql = String.format("%s and vehiclecolor = %s and vehicleclass = '%s' and plateclass = %s  %s"
-                        , sql, VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
+                        , prefixSql, VehicleEnum.VEHICLE_COLOR[random.nextInt(VehicleEnum.VEHICLE_COLOR.length)],
                         VehicleEnum.VEHICLE_CLASS[random.nextInt(VehicleEnum.VEHICLE_CLASS.length)],
-                        VehicleEnum.PLATE_CLASS[random.nextInt(VehicleEnum.PLATE_CLASS.length)], sql01);
+                        VehicleEnum.PLATE_CLASS[random.nextInt(VehicleEnum.PLATE_CLASS.length)], suffixSql);
                 break;
             default:
-                fullSql = sql;
+                fullSql = prefixSql;
                 break;
         }
-        return typeMapper.execute(fullSql);
+        return fullSql;
+    }
+
+    @Override
+    public double searchVehicleStructured(String tableName, String startDate, String endDate, int number) {
+        String prefixSql = String.format("select * from %s where cur_date between '%s' and '%s' ", tableName, startDate, endDate);
+        String suffixSql = " order by passtime,recordid limit 10 offset 0 ";
+        String fullSql = spliceRandomSql(prefixSql, suffixSql, number);
+        return typeMapper.execute(fullSql, true);
     }
 }

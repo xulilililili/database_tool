@@ -2,26 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bf28c2c-9460-4797-ac9a-b410d977a34d" name="Default Changelist" comment="修改">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/TypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/QueryTaskByConditions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/unis/db/dao/TypeMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/database.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/database.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ThreadUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ThreadUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/config/HikariConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/config/HikariConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/VehicleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/VehicleMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/TypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/TypeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataByFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/thread/LoadDataByFileThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/database_tool.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/common/task/SchedulerTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/common/task/SchedulerTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/dao/VehicleMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/dao/impl/VehicleMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/common/utils/ThreadUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/common/utils/ThreadUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/config/HikariConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/config/HikariConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/controller/MakeDataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/controller/MakeDataController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/controller/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/controller/dto/UseByConditions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/controller/dto/UseByConditions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/dao/TypeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/dao/TypeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/dao/impl/TypeMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/dao/impl/TypeMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/TypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/TypeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/VehicleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/VehicleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/CopyInDataByFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/CopyInDataService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/MakeDataServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/MakeDataServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/VehicleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/TypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/TypeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/VehicleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/VehicleServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/database_tool-1.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/database_tool-1.0.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/database_tool-1.0.1.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/database_tool-1.0.1.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,55 +71,110 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="-159">
+              <caret line="80" column="67" lean-forward="true" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/enums/TableTypeEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="547">
+              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="71" lean-forward="true" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1665#1666#0" expanded="true" />
+                <element signature="e#1692#1693#0" expanded="true" />
+                <element signature="e#1732#1733#0" expanded="true" />
+                <element signature="e#1764#1765#0" expanded="true" />
+                <element signature="e#1800#1801#0" expanded="true" />
+                <element signature="e#1832#1833#0" expanded="true" />
+                <element signature="e#1882#1883#0" expanded="true" />
+                <element signature="e#1924#1925#0" expanded="true" />
+                <element signature="e#1957#1958#0" expanded="true" />
+                <element signature="e#1989#1990#0" expanded="true" />
+                <element signature="e#2036#2037#0" expanded="true" />
+                <element signature="e#2078#2079#0" expanded="true" />
+                <element signature="e#2106#2107#0" expanded="true" />
+                <element signature="e#2133#2134#0" expanded="true" />
+                <element signature="e#2170#2171#0" expanded="true" />
+                <element signature="e#2202#2203#0" expanded="true" />
+                <element signature="e#2238#2239#0" expanded="true" />
+                <element signature="e#2270#2271#0" expanded="true" />
+                <element signature="e#2320#2321#0" expanded="true" />
+                <element signature="e#2362#2363#0" expanded="true" />
+                <element signature="e#2390#2391#0" expanded="true" />
+                <element signature="e#2417#2418#0" expanded="true" />
+                <element signature="e#2454#2455#0" expanded="true" />
+                <element signature="e#2486#2487#0" expanded="true" />
+                <element signature="e#2519#2520#0" expanded="true" />
+                <element signature="e#2551#2552#0" expanded="true" />
+                <element signature="e#2598#2599#0" expanded="true" />
+                <element signature="e#2640#2641#0" expanded="true" />
+                <element signature="e#2674#2675#0" expanded="true" />
+                <element signature="e#2707#2708#0" expanded="true" />
+                <element signature="e#2756#2757#0" expanded="true" />
+                <element signature="e#2800#2801#0" expanded="true" />
+                <element signature="e#2832#2833#0" expanded="true" />
+                <element signature="e#2860#2861#0" expanded="true" />
+                <element signature="e#2903#2904#0" expanded="true" />
+                <element signature="e#2937#2938#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="90" column="44" lean-forward="true" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+            <state relative-caret-position="125">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#923#950#1" expanded="true" />
+                <element signature="e#613#614#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,6 +188,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -148,21 +225,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/CopyInDataByFile.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/MakeDataApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/config/DataSourceConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ThreadUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/enums/DatabaseTypeEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/FaceSnapController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/CopyInUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/HikariUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/dao/VehicleMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/model/FaceArchive.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataByFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/FaceSnapService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/PersonService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/config/HikariConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/SearchByConditions.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/VehicleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/PersonController.java" />
@@ -171,7 +237,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/TerminalFeature.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TerminalFeatureImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/model/TerminalFeature.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/enums/TableTypeEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/MakeDataService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ToolUtils.java" />
@@ -188,17 +253,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/PersonServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/CastUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/VehicleMapperImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/LoadDataThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/thread/LoadDataThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/thread/CopyInDataByFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/thread/LoadDataByFileThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/TypeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/thread/QueryThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/QueryTaskByConditions.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/config/HikariConfig.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/unis/db/dao/TypeMapperTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/CopyInUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ThreadUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -225,9 +302,12 @@
       <select />
     </treeState>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1585" />
-    <option name="y" value="21" />
+    <option name="x" value="1609" />
+    <option name="y" value="15" />
     <option name="width" value="1407" />
     <option name="height" value="810" />
   </component>
@@ -239,8 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -291,6 +369,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="task" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -302,6 +390,15 @@
               <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="database_tool" type="b2602c69:ProjectViewProjectNode" />
@@ -365,12 +462,23 @@
               <item name="database_tool" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="thread" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="database_tool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_tool" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,7 +490,9 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560137605018" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560329323996" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../database_tool01/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -393,6 +503,12 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.unis.db.dao" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.unis.gp.common" />
       <recent name="com.unis.pg.common" />
@@ -411,22 +527,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.MakeDataApplication">
-    <configuration name="CopyInDataByFile.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="database_tool" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.unis.db.common.thread.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.unis.db.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.unis.db.service.impl.CopyInDataByFile" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FaceArchive.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="database_tool" />
       <extension name="coverage">
@@ -459,17 +559,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TableTypeEnum.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TypeMapperTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="database_tool" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.unis.db.common.enums.*" />
+          <option name="PATTERN" value="com.unis.db.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.unis.db.enums" />
-      <option name="MAIN_CLASS_NAME" value="com.unis.db.common.enums.TableTypeEnum" />
+      <option name="PACKAGE_NAME" value="com.unis.db.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.unis.db.dao.TypeMapperTest" />
       <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TypeMapperTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="database_tool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.unis.db.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.unis.db.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.unis.db.dao.TypeMapperTest" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -491,6 +607,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="Remote" nameIsGenerated="true">
+      <module name="database_tool" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="192.168.121.232" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="MakeDataApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="database_tool" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.unis.db.MakeDataApplication" />
@@ -500,20 +630,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CopyInDataByFile.test" />
       <item itemvalue="JUnit.FaceArchive.test" />
       <item itemvalue="JUnit.SchedulerTask.test" />
-      <item itemvalue="JUnit.TableTypeEnum.test" />
       <item itemvalue="JUnit.VehicleStructured.test" />
+      <item itemvalue="JUnit.TypeMapperTest.test" />
+      <item itemvalue="JUnit.TypeMapperTest.test1" />
+      <item itemvalue="Remote.Unnamed" />
       <item itemvalue="Spring Boot.MakeDataApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TypeMapperTest.test1" />
+        <item itemvalue="JUnit.TypeMapperTest.test" />
         <item itemvalue="JUnit.SchedulerTask.test" />
         <item itemvalue="JUnit.FaceArchive.test" />
         <item itemvalue="JUnit.VehicleStructured.test" />
-        <item itemvalue="JUnit.CopyInDataByFile.test" />
-        <item itemvalue="JUnit.TableTypeEnum.test" />
       </list>
     </recent_temporary>
   </component>
@@ -547,7 +678,11 @@
       <workItem from="1558082847927" duration="696000" />
       <workItem from="1558178107867" duration="3479000" />
       <workItem from="1558418542955" duration="25933000" />
-      <workItem from="1559269641570" duration="26727000" />
+      <workItem from="1559269641570" duration="48495000" />
+      <workItem from="1560170784859" duration="147000" />
+      <workItem from="1560171157769" duration="224000" />
+      <workItem from="1560171772829" duration="7460000" />
+      <workItem from="1560224478507" duration="17836000" />
     </task>
     <task id="LOCAL-00001" summary="修改">
       <created>1556523012421</created>
@@ -560,12 +695,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TableTypeEnum_test - 2019.03.29 at 13h 58m 09s.xml">
-      <configuration name="TableTypeEnum.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CopyInDataByFile_test - 2019.03.29 at 13h 59m 17s.xml">
-      <configuration name="CopyInDataByFile.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CopyInDataByFile_test - 2019.03.29 at 13h 59m 37s.xml">
       <configuration name="CopyInDataByFile.test" configurationId="JUnit" />
     </history-entry>
@@ -584,9 +713,21 @@
     <history-entry file="SchedulerTask_test - 2019.04.02 at 14h 09m 19s.xml">
       <configuration name="SchedulerTask.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TypeMapperTest_test - 2019.06.10 at 20h 32m 54s.xml">
+      <configuration name="TypeMapperTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TypeMapperTest_test1 - 2019.06.10 at 21h 07m 57s.xml">
+      <configuration name="TypeMapperTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TypeMapperTest_test1 - 2019.06.10 at 21h 18m 11s.xml">
+      <configuration name="TypeMapperTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TypeMapperTest_test1 - 2019.06.10 at 21h 21m 42s.xml">
+      <configuration name="TypeMapperTest.test1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="548823000" />
+    <option name="totallyTimeSpent" value="596316000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -598,10 +739,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1585" y="21" width="1407" height="810" extended-state="0" />
+    <frame x="1609" y="15" width="1407" height="810" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.59006214" visible="true" weight="0.24834193" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.59006214" visible="true" weight="0.25202653" />
       <window_info id="Structure" order="1" sideWeight="0.4099379" side_tool="true" weight="0.22698525" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -610,9 +751,9 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32850942" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8793829" weight="0.28323698" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4680851" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32658958" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8793829" visible="true" weight="0.31791908" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2283237" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
@@ -690,10 +831,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/config/JdbcPool.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/thread/FixedThreadPoolTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/thread/QueryRecordID.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/thread/ThreadRequest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/thread/ThreadSql.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/JdbcUtils.java" />
@@ -719,13 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/enums/DatabaseTypeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/model/TerminalFeature.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -743,17 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/CopyInUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getSql#0;class#CopyInUtils#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -765,13 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/enums/VehicleEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -843,13 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataByFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/model/FaceSnapStructured.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -867,38 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/enums/TableTypeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="75" column="20" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/config/HikariConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="39" column="31" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/HikariUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="56" column="52" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -993,30 +1066,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="49" column="45" lean-forward="true" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/RandomUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="117" column="100" lean-forward="true" selection-start-line="117" selection-start-column="70" selection-end-line="117" selection-end-column="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ThreadUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1034,64 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="65" column="32" lean-forward="true" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/MakeDataApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/MakeDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/TableUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -1102,44 +1097,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/MakeDataService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="75">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/thread/LoadDataByFileThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="31" column="108" selection-start-line="31" selection-start-column="90" selection-end-line="31" selection-end-column="108" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/QueryTaskByConditions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-979">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="-350">
+          <caret line="25" column="56" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1313#1314#0" expanded="true" />
+            <element signature="e#1361#1362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/config/HikariConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1212#1213#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/TypeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="420">
+          <caret line="67" column="42" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/Callable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/MakeDataApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/thread/QueryThread.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/thread/LoadDataThread.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/unis/db/dao/TypeMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/CopyInUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="56" column="44" lean-forward="true" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getSql#0;class#CopyInUtils#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4001">
+          <caret line="164" column="5" lean-forward="true" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/HikariUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/enums/DatabaseTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/enums/VehicleEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ThreadUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1067#1107#0" expanded="true" />
+            <element signature="e#1335#1375#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        <state relative-caret-position="300">
+          <caret line="90" column="44" lean-forward="true" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1148,21 +1277,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+        <state relative-caret-position="-159">
+          <caret line="80" column="67" lean-forward="true" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#923#950#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="37" column="46" lean-forward="true" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+        <state relative-caret-position="686">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/common/enums/TableTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="71" lean-forward="true" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1665#1666#0" expanded="true" />
+            <element signature="e#1692#1693#0" expanded="true" />
+            <element signature="e#1732#1733#0" expanded="true" />
+            <element signature="e#1764#1765#0" expanded="true" />
+            <element signature="e#1800#1801#0" expanded="true" />
+            <element signature="e#1832#1833#0" expanded="true" />
+            <element signature="e#1882#1883#0" expanded="true" />
+            <element signature="e#1924#1925#0" expanded="true" />
+            <element signature="e#1957#1958#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+            <element signature="e#2036#2037#0" expanded="true" />
+            <element signature="e#2078#2079#0" expanded="true" />
+            <element signature="e#2106#2107#0" expanded="true" />
+            <element signature="e#2133#2134#0" expanded="true" />
+            <element signature="e#2170#2171#0" expanded="true" />
+            <element signature="e#2202#2203#0" expanded="true" />
+            <element signature="e#2238#2239#0" expanded="true" />
+            <element signature="e#2270#2271#0" expanded="true" />
+            <element signature="e#2320#2321#0" expanded="true" />
+            <element signature="e#2362#2363#0" expanded="true" />
+            <element signature="e#2390#2391#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2454#2455#0" expanded="true" />
+            <element signature="e#2486#2487#0" expanded="true" />
+            <element signature="e#2519#2520#0" expanded="true" />
+            <element signature="e#2551#2552#0" expanded="true" />
+            <element signature="e#2598#2599#0" expanded="true" />
+            <element signature="e#2640#2641#0" expanded="true" />
+            <element signature="e#2674#2675#0" expanded="true" />
+            <element signature="e#2707#2708#0" expanded="true" />
+            <element signature="e#2756#2757#0" expanded="true" />
+            <element signature="e#2800#2801#0" expanded="true" />
+            <element signature="e#2832#2833#0" expanded="true" />
+            <element signature="e#2860#2861#0" expanded="true" />
+            <element signature="e#2903#2904#0" expanded="true" />
+            <element signature="e#2937#2938#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -43,7 +43,7 @@ public class UseByConditions {
     /**
      * 线程数
      */
-    @Max(message = "最大值不得大于1", groups = {MakeDataGroup.class}, value = 8)
+    @Max(message = "最大值不得大于8", groups = {MakeDataGroup.class}, value = 8)
     @Min(message = "最小值不得小于1", groups = {MakeDataGroup.class}, value = 1)
     @NotNull(message = "线程数为空", groups = {MakeDataGroup.class})
     private int threadNum;

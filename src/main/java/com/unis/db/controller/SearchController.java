@@ -1,16 +1,17 @@
 package com.unis.db.controller;
 
-import com.unis.db.common.utils.DateUtils;
-import com.unis.db.common.utils.RandomUtils;
-import com.unis.db.service.TypeService;
-import com.unis.db.service.VehicleService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+        import com.unis.db.common.utils.DateUtils;
+        import com.unis.db.common.utils.RandomUtils;
+        import com.unis.db.controller.dto.QueryTaskByConditions;
+        import com.unis.db.controller.dto.UseByConditions;
+        import com.unis.db.service.TypeService;
+        import com.unis.db.service.VehicleService;
+        import org.slf4j.Logger;
+        import org.slf4j.LoggerFactory;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.validation.BindingResult;
+        import org.springframework.validation.annotation.Validated;
+        import org.springframework.web.bind.annotation.*;
 
 /**
  * @author xuli
@@ -45,5 +46,13 @@ public class SearchController {
         String startDate = RandomUtils.getRandomDateInMonth(month, days);
         String endDate = DateUtils.getDateByAdd(startDate, days - 1);
         return vehicleService.searchVehicleStructured(tableName, startDate, endDate, number);
+    }
+
+    @PostMapping(value = {"/vehicle/query-task"})
+    public Boolean queryTask(
+            @Validated({QueryTaskByConditions.QueryTaskGroup.class}) @RequestBody QueryTaskByConditions queryTaskByConditions,
+            BindingResult bindingResult) {
+        MakeDataController.bindingResultCheck(bindingResult);
+        return typeService.queryTask(queryTaskByConditions);
     }
 }

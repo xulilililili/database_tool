@@ -1,5 +1,7 @@
 package com.unis.db.service;
 
+import com.unis.db.controller.dto.QueryTaskByConditions;
+
 /**
  * @author xuli
  * @date 2019/6/10
@@ -56,5 +58,13 @@ public interface TypeService {
      */
     double getRecordIdPartition(String tableName, String startDate, String endDate);
 
+    /**
+     * 测试数据库随机查询性能
+     * @param queryTaskByConditions dto
+     * @return T or F
+     */
+    boolean queryTask(QueryTaskByConditions queryTaskByConditions);
+
+    String getRandomTable(String schemaName,String tableLike);
 
 }

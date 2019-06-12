@@ -43,7 +43,7 @@ public class MakeDataController {
         return makeDataService.makeDataByPartition(useByConditions);
     }
 
-    private void bindingResultCheck(BindingResult bindingResult) {
+    public static void bindingResultCheck(BindingResult bindingResult) {
         //捕获不合法参数
         if (bindingResult.hasErrors()) {
             // 得到全部不合法的对象

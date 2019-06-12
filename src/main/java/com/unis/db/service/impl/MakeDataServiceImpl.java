@@ -1,17 +1,22 @@
 package com.unis.db.service.impl;
 
+import com.unis.db.common.utils.CopyInUtils;
 import com.unis.db.common.utils.DateUtils;
+import com.unis.db.common.utils.RandomUtils;
 import com.unis.db.common.utils.ThreadUtils;
 import com.unis.db.common.enums.TableTypeEnum;
 import com.unis.db.common.enums.DatabaseTypeEnum;
 import com.unis.db.controller.dto.UseByConditions;
-import com.unis.db.service.MakeDataService;
-import com.unis.db.service.TypeService;
+import com.unis.db.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Callable;
 
 
 /**
@@ -33,6 +38,14 @@ public class MakeDataServiceImpl implements MakeDataService {
 
     @Autowired
     TypeService typeService;
+    @Autowired
+    VehicleService vehicleService;
+    @Autowired
+    FaceSnapService faceSnapService;
+    @Autowired
+    PersonService personService;
+    @Autowired
+    TerminalFeatureService terminalFeatureService;
 
     @Override
     public Boolean useThread(String tableName, boolean partitionState, String date, UseByConditions useByConditions) {
@@ -42,10 +55,10 @@ public class MakeDataServiceImpl implements MakeDataService {
         int batchSize = useByConditions.getBatchSize();
         int threadNum = useByConditions.getThreadNum();
         for (int i = 0; i < threadNum; i++) {
-            CopyInDataService task = new CopyInDataService(tableName, date, type, loop, batchSize, partitionState);
+            LoadDataThread task = new LoadDataThread(tableName, date, type, loop, batchSize, partitionState);
             threadUtils.submit(task);
         }
-        if (threadUtils.waitTask(threadNum)) {
+        if (threadUtils.waitTask(threadNum,true)) {
             double cost = (System.currentTimeMillis() - begin) / 1000.0;
             int count = typeService.searchTotal(tableName);
             logger.info("[ INSERT DATA ] :{} finished with {}s and insert {} pieces of data ", tableName, cost, count);
@@ -54,6 +67,11 @@ public class MakeDataServiceImpl implements MakeDataService {
         return false;
     }
 
+    /**
+     * 先插入完数据 再创建索引
+     * @param useByConditions 类
+     * @return
+     */
     @Override
     public Boolean makeDataByPartition(UseByConditions useByConditions) {
         String algorithm = useByConditions.getAlgorithm();
@@ -76,7 +94,7 @@ public class MakeDataServiceImpl implements MakeDataService {
                     tableName = String.format("%s_%s", baseTableName, date);
                 }
                 if (!index) {
-                    typeService.createPgIndex(tableName, type);
+                    //typeService.createPgIndex(tableName, type);
                 }
                 date = DateUtils.getDateByAdd(date, 1);
             }
@@ -108,7 +126,7 @@ public class MakeDataServiceImpl implements MakeDataService {
                     //创建gp索引
                     typeService.executeCreateProc(procName, algorithm, date);
                     typeService.dropTable(String.format("%s_%s_%s", baseTableName, algorithm, DateUtils.getDateByAdd(date, -remainDate)));
-                } else{
+                } else {
                     if (!index) {
                         typeService.createPgIndex(tableName, type);
                     }
@@ -120,6 +138,70 @@ public class MakeDataServiceImpl implements MakeDataService {
             date = DateUtils.getDateByAdd(date, 1);
         }
         return true;
+    }
+
+
+    private class LoadDataThread implements Callable {
+
+        private String tableName;
+
+        private String date;
+
+        private String type;
+
+        private int loop;
+
+        private int batchSize;
+
+        private boolean partitionState;
+
+        private LoadDataThread(String tableName, String date, String type, int loop, int batchSize, boolean partitionState) {
+            this.tableName = tableName;
+            this.date = date;
+            this.type = type;
+            this.loop = loop;
+            this.batchSize = batchSize;
+            this.partitionState = partitionState;
+        }
+
+        @Override
+        public Boolean call() {
+            List<String> dataList = new ArrayList<>(batchSize);
+            long passTime;
+            for (int i = 0; i < loop; i++) {
+                for (int j = 0; j < batchSize; j++) {
+                    if (partitionState) {
+                        passTime = RandomUtils.getRandomPassTimeInMonth(date);
+                    } else {
+                        passTime = RandomUtils.getRandomPassTime(date, DateUtils.getDateByAdd(date, 1));
+                    }
+                    long recordID = RandomUtils.getRandomRecordID(passTime);
+                    switch (type) {
+                        case "vehicle":
+                            dataList.add(vehicleService.makeVehicleData(passTime, recordID, partitionState));
+                            break;
+                        case "facesnap":
+                            dataList.add(faceSnapService.makeFaceSnapData(passTime, recordID, partitionState));
+                            break;
+                        case "person":
+                            dataList.add(personService.makePersonData(passTime, recordID, partitionState));
+                            break;
+                        case "terminal_feature":
+                            dataList.add(terminalFeatureService.makeTerminalFeatureData(passTime, recordID, partitionState));
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                String data = String.join("\n", dataList);
+                //执行copyIn
+                if (!CopyInUtils.copyIn(data, tableName)) {
+                    return false;
+                }
+                dataList.clear();
+            }
+            return true;
+        }
     }
 }
 

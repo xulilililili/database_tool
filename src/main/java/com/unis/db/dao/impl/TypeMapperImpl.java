@@ -23,10 +23,17 @@ public class TypeMapperImpl implements TypeMapper {
 
     @Override
     public Integer searchTotal(String sql) {
+        return jdbcTemplate.queryForObject(sql, Integer.class);
+    }
+
+    @Override
+    public Integer searchTotal(String sql, boolean printLog) {
         Long startTime = System.currentTimeMillis();
-        Integer total = jdbcTemplate.queryForObject(sql, Integer.class);
+        int total = searchTotal(sql);
         Long endTime = System.currentTimeMillis();
-        logger.info("[ SELECT COUNT ]:{} finished with {}s", sql, (endTime - startTime) / 1000.0);
+        if (printLog) {
+            logger.info("[ SELECT COUNT ]:[{}] finished with {}s", sql, (endTime - startTime) / 1000.0);
+        }
         return total;
     }
 
@@ -39,8 +46,21 @@ public class TypeMapperImpl implements TypeMapper {
     }
 
     @Override
-    public List<Long> getRecordId(String sql){
-        return jdbcTemplate.query(sql,(rs,rowNum) -> rs.getLong("recordid"));
+    public double execute(String sql, boolean printLog) {
+        double cost = execute(sql);
+        if (printLog) {
+            logger.info("[ EXECUTE SQL ]:[{}] finished with {}s", sql, cost);
+        }
+        return cost;
     }
 
+    @Override
+    public List<Long> getRecordId(String sql) {
+        return jdbcTemplate.query(sql, (rs, rowNum) -> rs.getLong("recordid"));
+    }
+
+    @Override
+    public List<String> getTableName(String sql) {
+        return jdbcTemplate.query(sql, (rs, rowNum) -> rs.getString("tablename"));
+    }
 }
