@@ -2,47 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bf28c2c-9460-4797-ac9a-b410d977a34d" name="Default Changelist" comment="修改">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/QueryTaskByConditions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/unis/db/dao/TypeMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/database.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/database.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/common/task/SchedulerTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ThreadUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/common/utils/ThreadUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/config/HikariConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/config/HikariConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/MakeDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/controller/dto/UseByConditions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/TypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/dao/impl/TypeMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/TypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/TypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/VehicleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataByFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/thread/LoadDataByFileThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/CopyInDataService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/MakeDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/TypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unis/db/service/impl/VehicleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/common/task/SchedulerTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/common/task/SchedulerTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/common/utils/ThreadUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/common/utils/ThreadUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/config/HikariConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/config/HikariConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/controller/MakeDataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/controller/MakeDataController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/controller/SearchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/controller/dto/UseByConditions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/controller/dto/UseByConditions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/dao/TypeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/dao/TypeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/dao/impl/TypeMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/dao/impl/TypeMapperImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/TypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/TypeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/VehicleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/VehicleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/CopyInDataByFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/CopyInDataService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/MakeDataServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/MakeDataServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/TypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/TypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/VehicleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/unis/db/service/impl/VehicleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database_tool-1.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/database_tool-1.0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/database_tool-1.0.1.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/database_tool-1.0.1.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -490,7 +450,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560329323996" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560330623104" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../database_tool01/pom.xml" />
@@ -682,7 +642,7 @@
       <workItem from="1560170784859" duration="147000" />
       <workItem from="1560171157769" duration="224000" />
       <workItem from="1560171772829" duration="7460000" />
-      <workItem from="1560224478507" duration="17836000" />
+      <workItem from="1560224478507" duration="18429000" />
     </task>
     <task id="LOCAL-00001" summary="修改">
       <created>1556523012421</created>
@@ -727,7 +687,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="596316000" />
+    <option name="totallyTimeSpent" value="596909000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
